@@ -50,6 +50,8 @@
       <updated>1566282889844</updated>
       <workItem from="1566282892095" duration="1381000" />
       <workItem from="1566299740191" duration="3853000" />
+      <workItem from="1566357687514" duration="494000" />
+      <workItem from="1566366698130" duration="3297000" />
     </task>
     <servers />
   </component>
@@ -61,7 +63,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
