@@ -17,6 +17,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectId" id="1Pg5ROnJ3YfXJDb49fdiLqDd8Cv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -24,7 +25,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -51,7 +53,8 @@
       <workItem from="1566282892095" duration="1381000" />
       <workItem from="1566299740191" duration="3853000" />
       <workItem from="1566357687514" duration="494000" />
-      <workItem from="1566366698130" duration="3297000" />
+      <workItem from="1566366698130" duration="5931000" />
+      <workItem from="1566869863512" duration="4945000" />
     </task>
     <servers />
   </component>
