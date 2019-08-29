@@ -32,9 +32,11 @@ body {
     border-bottom: black;
     border-width: thick;
 }
-#wrapper {
-    width:auto;
-    height: 300px;
+.wrapper {
+    max-width:1000px;
+    height:300px;
+    margin-right:auto;
+    margin-left:auto;
 }
 
 /* SPECIFIC CONFIGS SUCH AS UL'S AND IMAGEFLOATS */
@@ -44,7 +46,7 @@ body {
     padding-right:40px;
 }
 h1 {
-    font-style: bold;
+    font-weight: bold;
     font-family: Arial, sans-serif;
     font-size:24px;
     padding-left:10px;
@@ -55,8 +57,9 @@ nav ul{
     list-style: none;
 }
 ul.homepage {
-    list-style-type:lower-greek;
+    list-style-image: url(brownButton.png);
 }
+/* Button jpg taken from http://www.rgbstock.com/bigphoto/mf6JSbW/Glossy+Ball+3 */
 nav a {
     text-decoration: none;
     color: #A0846A;

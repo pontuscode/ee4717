@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="58faad79-eb33-4832-8cc4-e5fbde46ed53" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week_3/form tests/form_1.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/week_4/CaseStudyPt2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/week_4/CaseStudyPt2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week_4/CaseStudyPt2/jobs.html" beforeDir="false" afterPath="$PROJECT_DIR$/week_4/CaseStudyPt2/jobs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/week_4/CaseStudyPt2/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/week_4/CaseStudyPt2/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week_4/CaseStudyPt2/music.html" beforeDir="false" afterPath="$PROJECT_DIR$/week_4/CaseStudyPt2/music.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/week_4/CaseStudyPt2/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/week_4/CaseStudyPt2/stylesheet.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,7 +63,7 @@
       <workItem from="1566366698130" duration="5931000" />
       <workItem from="1566869863512" duration="7119000" />
       <workItem from="1567048387362" duration="14475000" />
-      <workItem from="1567072947278" duration="3913000" />
+      <workItem from="1567072947278" duration="6527000" />
     </task>
     <servers />
   </component>
