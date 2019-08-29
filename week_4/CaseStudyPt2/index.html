@@ -3,26 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>JavaJam Coffee House Home</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-<header>
-    <h1>JavaJam Coffee House</h1>
-</header>
-<nav>
-   <b><a href="index.html">Home</a> &nbsp;
-    <a href="menu.html">Menu</a> &nbsp;
-    <a href="music.html">Music</a> &nbsp;
-    <a href="jobs.html">Jobs</a></b>
-</nav>
-<ul>
-    <li>Speciality Coffee and Tea</li>
-    <li>Bagels, Muffins, and Organic Snacks</li>
-    <li>Music and Poetry Readings</li>
-    <li>Open Mic Night Every Friday</li>
-</ul>
-<p>54321 Route 42 <br>
-Ellison Bay, WI 54210</p>
-<footer><i><small>Copyright &copy; 2014 JavaJam Coffee House<br>
-    <a href="mailto:pontus@jarnemyr.com">pontus@jarnemyr.com</a></small></i></footer>
+<div id="wrapper">
+    <div class="header">
+        <header>
+            <h1>JavaJam Coffee House</h1>
+        </header>
+    </div>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <h1>Follow the Winding Road to JavaJam</h1>
+        <ul class="homepage">
+            <img src="Coffee.jpg" width="350" height="200" id="floatleft" alt="Coffee">
+            <!-- Image taken from https://www.thecoffeecompass.com/wp-content/uploads/BowTruss.jpg -->
+            <li>Speciality Coffee and Tea</li>
+            <li>Bagels, Muffins, and Organic Snacks</li>
+            <li>Music and Poetry Readings</li>
+            <li>Open Mic Night Every Friday</li>
+        </ul>
+    </div>
+    <div class="footer">
+        <footer>Copyright &copy; 2014 JavaJam Coffee House<br>
+            <a href="mailto:pontus@jarnemyr.com">pontus@jarnemyr.com</a>
+        </footer>
+    </div>
+</div>
 </body>
 </html>

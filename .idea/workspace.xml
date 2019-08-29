@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58faad79-eb33-4832-8cc4-e5fbde46ed53" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/week_4/CaseStudyPt2/stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week_2/CSS10/twocolumn4.html" beforeDir="false" afterPath="$PROJECT_DIR$/week_2/CSS10/twocolumn4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week_4/CaseStudyPt2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/week_4/CaseStudyPt2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week_4/CaseStudyPt2/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/week_4/CaseStudyPt2/menu.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +32,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -57,7 +61,7 @@
       <workItem from="1566357687514" duration="494000" />
       <workItem from="1566366698130" duration="5931000" />
       <workItem from="1566869863512" duration="7119000" />
-      <workItem from="1567048387362" duration="614000" />
+      <workItem from="1567048387362" duration="13302000" />
     </task>
     <servers />
   </component>

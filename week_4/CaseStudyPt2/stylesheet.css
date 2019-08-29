@@ -1,0 +1,63 @@
+body {
+    background-color: #e2d2b0;
+}
+/*==================== CONFIGURING DIV'S ======================*/
+.header {
+    background-color: #123123;
+    width:1000px;
+    height:100px;
+}
+.navbar {
+    float: left;
+    width: 150px;
+    background-color: #444444;
+    height:300px;
+}
+.content {
+    height:300px;
+    width:850px;
+    margin-left:150px;
+}
+.footer {
+    background-color: #123123;
+    font-size: small;
+    font-style: italic;
+    text-align: center;
+    width: 1000px;
+    height:70px;
+    clear:both;
+}
+#wrapper {
+    width:1000px;
+    height:470px;
+    margin-left:60px;
+}
+
+/* SPECIFIC CONFIGS SUCH AS UL'S AND IMAGEFLOATS */
+
+#floatleft {
+    float:left;
+    padding-right:40px;
+}
+h1 {
+    font-style: bold;
+    font-family: Arial, sans-serif;
+    font-size:24px;
+    padding-left:10px;
+    margin-top:0px;
+}
+nav ul{
+    list-style: none;
+}
+ul.homepage {
+    list-style-type:lower-greek;
+}
+nav a {
+    text-decoration: none;
+    color: chocolate;
+    font-weight: bold;
+    text-align: center;
+    font-size:large;
+}
+
+/*==================== TABLE CONFIG =====================*/
