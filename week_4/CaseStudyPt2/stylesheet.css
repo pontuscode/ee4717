@@ -2,26 +2,31 @@ body {
     background-color: #F5F5DE;
     width:1000px;
     margin:50px;
+    box-shadow: 7px 7px 5px black;
 }
 /*==================== CONFIGURING DIV'S ======================*/
-.header {
+header {
     background-color: #CDB591;
     width:1000px;
     height:100px;
+}
+.wrapper {
+    max-width:1000px;
+    height:auto;
+    position:relative;
 }
 .navbar {
     float: left;
     width: 150px;
     background-color: #DFD2B4;
     height: 100%;
+    position: absolute;
 }
 .content {
-    height:auto;
-    width:auto;
     margin-left:150px;
     padding:20px;
 }
-.footer {
+footer {
     background-color: #CDB591;
     font-size: small;
     font-style: italic;
@@ -31,12 +36,6 @@ body {
     clear:both;
     border-bottom: black;
     border-width: thick;
-}
-.wrapper {
-    max-width:1000px;
-    height:300px;
-    margin-right:auto;
-    margin-left:auto;
 }
 
 /* SPECIFIC CONFIGS SUCH AS UL'S AND IMAGEFLOATS */
@@ -49,8 +48,8 @@ h1 {
     font-weight: bold;
     font-family: Arial, sans-serif;
     font-size:24px;
-    padding-left:10px;
-    margin-top:0px;
+    padding-left:0;
+    margin-top:0;
     color: #300402
 }
 nav ul{
@@ -58,6 +57,7 @@ nav ul{
 }
 ul.homepage {
     list-style-image: url(brownButton.png);
+    padding-left: 355px;
 }
 /* Button jpg taken from http://www.rgbstock.com/bigphoto/mf6JSbW/Glossy+Ball+3 */
 nav a {
@@ -81,4 +81,17 @@ tr:first-of-type {
 }
 tr:nth-of-type(odd) {
     background-color: #CDB591;
+}
+
+/*================= FORM CONFIG ========================*/
+
+label {
+    text-align: right;
+    padding-right:10px;
+    margin-top: 10px;
+    width:100px;
+    float:left;
+}
+input, textarea {
+    margin-top:10px;
 }

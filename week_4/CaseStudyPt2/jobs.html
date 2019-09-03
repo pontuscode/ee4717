@@ -6,11 +6,9 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-<div class="header">
-    <header>
-        <h1>JavaJam Coffee House</h1>
-    </header>
-</div>
+<header>
+    <h1>JavaJam Coffee House</h1>
+</header>
 <div class="wrapper">
     <div class="navbar">
         <nav>
@@ -23,12 +21,24 @@
         </nav>
     </div>
     <div class="content">
+        <h1>Jobs at JavaJam</h1>
+        <p>Want to work at JavaJam? Fill out the form below to start your application. Required fields are <br>
+        marked with an asterisk *</p>
+        <form action="show_get.php" method="get">
+            <label>*Name:</label>
+            <input type="text" name="CustName" id="CustName" required="1"><br>
+            <label>*E-mail:</label>
+            <input type="email" name="email" id="email" required="1"><br>
+            <label>Start date:</label>
+            <input type="date" name="date" id="date"><br>
+            <label>*Experience:</label>
+            <textarea name="Exp" id="Exp" rows="4" cols="40" required="1"></textarea><br>
+            <input type="submit" value="Apply Now">
+        </form>
     </div>
 </div>
-<div class="footer">
-    <footer>Copyright &copy; 2014 JavaJam Coffee House<br>
-        <a href="mailto:pontus@jarnemyr.com">pontus@jarnemyr.com</a>
-    </footer>
-</div>
+<footer>Copyright &copy; 2014 JavaJam Coffee House<br>
+    <a href="mailto:pontus@jarnemyr.com">pontus@jarnemyr.com</a>
+</footer>
 </body>
 </html>
