@@ -24,9 +24,9 @@
         <h1>Jobs at JavaJam</h1>
         <p>Want to work at JavaJam? Fill out the form below to start your application. Required fields are <br>
         marked with an asterisk *</p>
-        <form action="show_get.php" method="get">
+        <form name="jobForm" action="show_get.php" method="get">
             <label>*Name:</label>
-            <input type="text" name="CustName" id="CustName" required="1"><br>
+            <input type="text" name="CustName" id="CustName" required="1" onchange="validateName()"><br>
             <label>*E-mail:</label>
             <input type="email" name="email" id="email" required="1"><br>
             <label>Start date:</label>
