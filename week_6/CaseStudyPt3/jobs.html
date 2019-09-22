@@ -5,6 +5,19 @@
     <title>JavaJam Coffee House Home</title>
     <link rel="stylesheet" href="stylesheet.css">
     <script type="text/javascript" src="scripts/javascript/formvalidation.js"></script>
+    <style>
+        label {
+            text-align: right;
+            margin-right:30px;
+            margin-top: 10px;
+            width:100px;
+            float:left;
+            display:inline-block;
+        }
+        input, textarea {
+            margin-top:10px;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -26,7 +39,7 @@
         <p>Want to work at JavaJam? Fill out the form below to start your application. Required fields are <br>
         marked with an asterisk *</p>
         <form name="jobForm" action="" method="get">
-            <label>*Name:</label>
+            <label for="name">*Name:</label>
             <input type="text" id="name" onchange="validateName()"><br>
             <label>*E-mail:</label>
             <input type="email" id="email" onchange="validateEmail()"><br>

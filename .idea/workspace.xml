@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58faad79-eb33-4832-8cc4-e5fbde46ed53" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/week_6/CaseStudyPt3/scripts/javascript/formvalidation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week_6/CaseStudyPt3/scripts/javascript/calcprice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week_4/CaseStudyPt2/jobs.html" beforeDir="false" afterPath="$PROJECT_DIR$/week_4/CaseStudyPt2/jobs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week_4/CaseStudyPt2/music.html" beforeDir="false" afterPath="$PROJECT_DIR$/week_4/CaseStudyPt2/music.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week_6/CaseStudyPt3/jobs.html" beforeDir="false" afterPath="$PROJECT_DIR$/week_6/CaseStudyPt3/jobs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week_6/CaseStudyPt3/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/week_6/CaseStudyPt3/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week_6/CaseStudyPt3/scripts/javascript/formvalidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/week_6/CaseStudyPt3/scripts/javascript/formvalidation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week_6/CaseStudyPt3/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/week_6/CaseStudyPt3/stylesheet.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +71,8 @@
       <workItem from="1567474377219" duration="467000" />
       <workItem from="1567474915415" duration="9125000" />
       <workItem from="1567500589301" duration="8370000" />
-      <workItem from="1568952830625" duration="12978000" />
+      <workItem from="1568952830625" duration="13475000" />
+      <workItem from="1569130843635" duration="16064000" />
     </task>
     <servers />
   </component>

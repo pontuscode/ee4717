@@ -94,7 +94,7 @@ nav a {
 
 table {
     border:none;
-    width:500px;
+    width:520px;
     border-spacing:2px;
     margin-left: 100px;
 
@@ -109,17 +109,4 @@ td:nth-child(odd) {
     text-align: center;
     font-weight: bold;
     font-family: Arial, sans-serif;
-}
-
-/*================= FORM CONFIG ========================*/
-
-label {
-    text-align: right;
-    padding-right:30px;
-    margin-top: 10px;
-    width:100px;
-    float:left;
-}
-input, textarea {
-    margin-top:10px;
 }

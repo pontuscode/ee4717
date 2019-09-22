@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>JavaJam Coffee House Menu</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <script type="text/javascript" src="scripts/javascript/calcprice.js"></script>
 </head>
 <body>
 <header>
@@ -26,17 +27,65 @@
             <tr>
                 <td id="leftcolumn_table">Just Java</td>
                 <td>Regular house blend, decaffeinated coffee, or flavor of the day. <br>
-                Endless cup $2.00</td>
+                <form name="regularRadio">
+                    <label><input type="radio" id="regular" name="regularRadio" checked="checked" onchange="updatePrice(1)">Endless cup $2.00</label>
+                 </form>
+                </td>
+                <td>
+                    <form onsubmit="return false;">
+                        <label><input type="number" id="regularQuan" value="0" min="0" style="width:30px;" onchange="updatePrice(1)"></label>
+                    </form>
+                </td>
+                <td style="width:120px;">
+                    <p>
+                        Subtotal: $<span id="regularTotal"></span>
+                    </p>
+                </td>
             </tr>
             <tr>
                 <td>Cafe au Lait</td>
                 <td>House blended coffee infused into a smooth, steamed milk.<br>
-                Single $2.00 Double $3.00</td>
+                <form name="radioCafe" id="radioCafe">
+                    <label><input type="radio" id="cafeLow" checked="checked" name="radioCafe" onchange="updatePrice(2)">Single $2.00</label>
+                    <label><input type="radio" id="cafeHigh" name="radioCafe" onchange="updatePrice(2)">Double $3.00</label>
+                </form>
+                </td>
+                <td>
+                    <form onsubmit="return false;">
+                        <labeL><input type="number" id="cafeQuan" value="0" style="width:30px;" min="0" onchange="updatePrice(2)"></labeL>
+                    </form>
+                </td>
+                <td style="width:120px;">
+                    <p>
+                        Subtotal: $<span id="cafeTotal"></span>
+                    </p>
+                </td>
             </tr>
             <tr>
                 <td>Iced Cappuccino</td>
                 <td>Sweetened espresso blended with icy-cold milk and served in a chilled glass<br>
-                Single $4.75 Double $5.75s</td>
+                <form name="radioCappuccino">
+                    <label><input type="radio" id="cappuccinoLow" checked="checked" name="radioCappuccino" onchange="updatePrice(3)">Single $4.75</label>
+                    <label><input type="radio" id="cappuccinoHigh" name="radioCappuccino" onchange="updatePrice(3)">Double $5.75</label>
+                </form>
+                <td>
+                <form onsubmit="return false;">
+                    <label><input type="number" id="cappuccinoQuan" value="0" style="width:30px;" min="0" onchange="updatePrice(3)"></label>
+                </form>
+                </td>
+                <td style="width:120px;">
+                    <p>
+                        Subtotal: $<span id="cappuccinoTotal"></span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td>
+                <td style="width:120px;">
+                    <p>
+                        Total: $<span id="totalPrice"></span>
+                    </p>
+                </td>
             </tr>
         </table>
     </div>

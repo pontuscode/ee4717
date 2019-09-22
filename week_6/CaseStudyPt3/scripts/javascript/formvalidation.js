@@ -33,20 +33,9 @@ function validateEmail(){
 function validateDate(){
     var date = new Date(document.getElementById("date").value);
     var currentDate = new Date();
-    if(date.getFullYear() >= currentDate.getFullYear()){
-        if(date.getMonth() >= currentDate.getMonth()){
-            if(date.getDate() > currentDate.getDate()){
-                return true;
-            }
-        }
+    if((date.getFullYear() >= currentDate.getFullYear()) && (date.getMonth() >= currentDate.getMonth()) && (date.getDate() > currentDate.getDate())){
+        return true;
     }
     alert("Date must be in the future.");
     return false;
 }
-function validateExp(){
-    alert("Exp");
-}
-/*
-function init(){
-    if(doc)
-}*/
