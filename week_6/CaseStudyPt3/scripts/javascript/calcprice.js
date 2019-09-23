@@ -45,9 +45,6 @@ function init(){
     for(i = 1; i <=3; i++){
         calculatePrice(i);
     }
-    document.getElementById("regularTotal").innerHTML = priceArray[0].toFixed(2);
-    document.getElementById("cafeTotal").innerHTML = priceArray[1].toFixed(2);
-    document.getElementById("cappuccinoTotal").innerHTML = priceArray[2].toFixed(2);
-    document.getElementById("totalPrice").innerHTML = (priceArray[0] + priceArray[1] + priceArray[2]).toFixed(2);
+    calculateTotal();
 }
 window.onload=init;
