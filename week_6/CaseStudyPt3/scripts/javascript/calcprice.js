@@ -28,8 +28,7 @@ function calculatePrice(id){
     calculateTotal();
 }
 function calculateTotal(){
-    const total = priceArray[0] + priceArray[1] + priceArray[2];
-    document.getElementById("totalPrice").innerHTML = total.toFixed(2);
+    document.getElementById("totalPrice").innerHTML = (priceArray[0] + priceArray[1] + priceArray[2]).toFixed(2);
 }
 function getQuantity(id){
     switch(id){
