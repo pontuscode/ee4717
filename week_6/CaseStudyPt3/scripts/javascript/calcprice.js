@@ -1,26 +1,26 @@
 var priceArray = [0.0,0.0,0.0];
 
-function updatePrice(id){
+function calculatePrice(id){
     switch(id){
         case 1:
-            priceArray[0] = 2*getQuantity(1);
+            priceArray[0] = 2.0*getQuantity(id);
             document.getElementById("regularTotal").innerHTML = priceArray[0].toFixed(2);
             break;
         case 2:
             if(document.getElementById("cafeLow").checked){
-                priceArray[1] = 2.0*getQuantity(2);
+                priceArray[1] = 2.0*getQuantity(id);
             }
             else {
-                priceArray[1] = 3.0*getQuantity(2);
+                priceArray[1] = 3.0*getQuantity(id);
             }
             document.getElementById("cafeTotal").innerHTML = priceArray[1].toFixed(2);
             break;
         case 3:
             if(document.getElementById("cappuccinoLow").checked){
-                priceArray[2] = 4.75*getQuantity(3);
+                priceArray[2] = 4.75*getQuantity(id);
             }
             else{
-                priceArray[2] = 5.75*getQuantity(3);
+                priceArray[2] = 5.75*getQuantity(id);
             }
             document.getElementById("cappuccinoTotal").innerHTML = priceArray[2].toFixed(2);
             break;
@@ -42,9 +42,9 @@ function getQuantity(id){
     }
 }
 function init(){
-    updatePrice(1);
-    updatePrice(2);
-    updatePrice(3);
+    for(i = 1; i <=3; i++){
+        calculatePrice(i);
+    }
     document.getElementById("regularTotal").innerHTML = priceArray[0].toFixed(2);
     document.getElementById("cafeTotal").innerHTML = priceArray[1].toFixed(2);
     document.getElementById("cappuccinoTotal").innerHTML = priceArray[2].toFixed(2);

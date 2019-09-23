@@ -12,7 +12,6 @@
             margin-top: 10px;
             width:100px;
             float:left;
-            display:inline-block;
         }
         input, textarea {
             margin-top:10px;
@@ -38,7 +37,7 @@
         <h1>Jobs at JavaJam</h1>
         <p>Want to work at JavaJam? Fill out the form below to start your application. Required fields are <br>
         marked with an asterisk *</p>
-        <form name="jobForm" action="" method="get">
+        <form name="jobForm" action="scripts/php/show_get.php" method="get">
             <label for="name">*Name:</label>
             <input type="text" id="name" onchange="validateName()"><br>
             <label>*E-mail:</label>
