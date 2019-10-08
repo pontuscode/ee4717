@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58faad79-eb33-4832-8cc4-e5fbde46ed53" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/project/deals.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/jobs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week_7/CaseStudyPt4/admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week_7/CaseStudyPt4/scripts/php/setupdb.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week_8/CaseStudy4/scripts/php/updateDB.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week_6/CaseStudyPt3/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/week_6/CaseStudyPt3/menu.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +32,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Pontus\WebstormProjects\ee4717\week_7\CaseStudyPt4\scripts\php" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -81,6 +81,8 @@
       <workItem from="1569470111195" duration="12940000" />
       <workItem from="1570241837294" duration="11989000" />
       <workItem from="1570339743043" duration="1596000" />
+      <workItem from="1570504894361" duration="1669000" />
+      <workItem from="1570526228506" duration="6496000" />
     </task>
     <servers />
   </component>
