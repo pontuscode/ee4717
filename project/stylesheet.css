@@ -1,0 +1,93 @@
+body {
+    background: url("media/pics/header_pic.jpg") center center fixed;
+    background-size:cover;
+}
+header {
+    font-size:60px;
+    font-weight: bold;
+    text-align: center;
+    height:100px;
+    width:100%;
+}
+footer {
+    text-align:center;
+    font-style: italic;
+    font-size:small;
+    clear:both;
+    color:#FFFF00;
+}
+.navbar {
+    width:100%;
+    height:20px;
+}
+.navbar_element_even {
+    font-weight: bold;
+    float:left;
+    width:23%;
+    text-align: center;
+    background-color:#ffff00;
+    display:block;
+    color:#006600;
+}
+.navbar_element_odd {
+    font-weight: bold;
+    float:left;
+    width:23%;
+    text-align:center;
+    background-color:#006600;
+    display:block;
+    color:#ffff00;
+}
+.active_element {
+    font-weight: bold;
+    float:left;
+    width:25%;
+    text-align: center;
+    background-color:#300402;
+    display:block;
+    color:#FFFFFF;
+}
+.wrapper {
+    height:100%;
+    width:100%;
+}
+.pic_left {
+    height:550px;
+    width:70%;
+    float:left;
+    margin:0;
+}
+.pic_right {
+    height:550px;
+    width:70%;
+    float:right;
+}
+.para_right {
+    color:#FFFFFF;
+    width:30%;
+    float:right;
+    background-color:rgba(0,0,0,0.6);
+    margin:0;
+}
+.para_left {
+    color:#FFFFFF;
+    width:30%;
+    float:left;
+    background-color:rgba(0,0,0,0.6);
+    margin:0;
+}
+.h2_homepage {
+    color:#FFFFFF;
+    background-color: rgba(0,0,0,0.6);
+    margin:0;
+    text-align:center;
+    width:30%;
+}
+/* Image sources:
+    background_picture : https://i0.wp.com/www.healthfitnessrevolution.com/wp-content/uploads/2017/02/iStock-609794900.jpg?fit=1254%2C836
+    durian_pizza1.jpg : https://coconuts.co/wp-content/uploads/2018/11/45154492_410295856170787_729699099456045056_n-960x540.jpg
+    durian_pizza2.jpg : https://media.therakyatpost.com/wp-content/uploads/2019/08/PHMY_Durian_Pizza_20190806.jpg
+    durian_pizza3.jpg : https://kopifolks.com/wp-content/uploads/2017/07/pezzo2.jpg
+
+    durian_dessert1.jpg : https://s3-ap-southeast-1.amazonaws.com/sphm-sww-site-production/2017/08/Heres-Where-To-Go-For-Delicious-Durian-Desserts-In-Singapore_14.jpg
+ */
