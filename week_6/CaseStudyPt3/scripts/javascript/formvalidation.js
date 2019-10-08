@@ -18,7 +18,7 @@ function validateEmail(){
     var email = document.getElementById("email").value;
     email.trim();
     if(email.length > 0){ //make sure it is not empty
-        var regexp = /^([\w\.-])+@([\w]+\.){1,3}([\w]){2,3}$/;
+        var regexp = /^([\w\.-])+@([\w]+\.){1,3}([A-z]){2,3}$/;
         if(regexp.test(email)){
             return true;
         }
@@ -33,9 +33,19 @@ function validateEmail(){
 function validateDate(){
     var date = new Date(document.getElementById("date").value);
     var currentDate = new Date();
-    if((date.getFullYear() >= currentDate.getFullYear()) && (date.getMonth() >= currentDate.getMonth()) && (date.getDate() > currentDate.getDate())){
-        return true;
-    }
-    alert("Date must be in the future.");
-    return false;
+    if(date.getFullYear() > currentDate.getFullYear()) {
+		return true;
+	}
+	else if(date.getFullYear() == currentDate.getFullYear()){
+		if(date.getMonth() > currentDate.getMonth()){
+			return true;
+		}
+		else if(date.getMonth() == currentDate.getMonth()){
+			if(date.getDate() > currentDate.getDate()){
+				return true;
+			}
+		}
+	}
+	alert("Date must be in the future.");
+	return false;
 }
