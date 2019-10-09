@@ -1,5 +1,5 @@
 <?php 
-include "scripts/php/updateDB.php";
+include "scripts/php/filltable.php";
 ?>
 <head>
     <meta charset="UTF-8">
@@ -31,17 +31,20 @@ include "scripts/php/updateDB.php";
                     </td>
                     <th>Just Java</th>
                     <td>Regular house blend, decaffeinated coffee, or flavor of the day. <br>
-                       Endless cup $<span id="regularPrice"></span><input style="width:40px;" formnovalidate type="hidden" id="regular">
+                       Endless cup <span id="regularPrice"></span><input style="width:40px;" step="0.01" formnovalidate type="hidden" id="regular" name="regular">
+					   <?php insert_table_row(1) ?>
                     </td>
                 </tr>
                 <tr>
                     <td style="width:15px;">
-                        <input type="checkbox" name="cafeCheck" id="cafeCheck" onclick="updateInputStatus(2)">
+                        <input type="checkbox" name="cafeCheck" id="cafeCheck"  onclick="updateInputStatus(2)">
                     </td>
                     <th>Cafe au Lait</th>
                     <td>House blended coffee infused into a smooth, steamed milk.<br>
-                        Single $<span id="cafeLowPrice"></span><input style="width: 40px;" formnovalidate type="hidden" id="cafeLow">
-                        Double $<span id="cafeHighPrice"></span><input style="width: 40px;" formnovalidate type="hidden" id="cafeHigh">
+                        Single <span id="cafeLowPrice"></span><input style="width: 40px;" step="0.01" type="hidden" id="smallCafe" name="smallCafe">
+						<?php insert_table_row(2) ?>
+                        Double <span id="cafeHighPrice"></span><input style="width: 40px;" step="0.01" type="hidden" id="largeCafe" name="largeCafe">
+						<?php insert_table_row(3) ?>
                     </td>
                 </tr>
                 <tr>
@@ -50,8 +53,10 @@ include "scripts/php/updateDB.php";
                     </td>
                     <th>Iced Cappuccino</th>
                     <td>Sweetened espresso blended with icy-cold milk and served in a chilled glass<br>
-                        Single $<span id="cappuccinoLowPrice"></span><input style="width: 40px;" formnovalidate type="hidden" id="cappuccinoLow">
-                        Double $<span id="cappuccinoHighPrice"></span><input style="width: 40px;" formnovalidate type="hidden" id="cappuccinoHigh">
+                        Single <span id="cappuccinoLowPrice"></span><input style="width: 40px;" step="0.01" type="hidden" id="smallCappuccino" name="smallCappuccino">
+						<?php insert_table_row(4) ?>
+                        Double <span id="cappuccinoHighPrice"></span><input style="width: 40px;" step="0.01" type="hidden" id="largeCappuccino" name="largeCappuccino">
+						<?php insert_table_row(5) ?>	
                 </tr>
                 <tr>
                     <td></td><td></td><td><input type="submit" value="Apply changes" style="float:right;"></td>
@@ -65,4 +70,3 @@ include "scripts/php/updateDB.php";
 </footer>
 </div>
 </body>
-</html>

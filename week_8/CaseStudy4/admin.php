@@ -14,7 +14,7 @@ include "scripts/php/setupDB.php";
     <div class="navbar">
         <nav>
             <ul>
-                <li><a href="admin_report.html">Price report</a></li>
+                <li><a href="admin_report.php">Price report</a></li>
                 <li><a href="admin_update.php">Price update</a></li>
             </ul>
         </nav>

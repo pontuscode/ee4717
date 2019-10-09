@@ -50,7 +50,7 @@ if (!mysqli_query($conn, $sql)) { //If the DB doesn't exist, we need to create i
 	//Fill tables with data
 
 	$sql = "INSERT INTO products (product_id, product_name, product_price)
-	VALUES (NULL, 'Endless regular', 2.00);";
+	VALUES (NULL, 'Endless cup', 2.00);";
 	$sql .= "INSERT INTO products (product_id, product_name, product_price)
 	VALUES (NULL, 'Small Cafe au Lait', 3.00);";
 	$sql .= "INSERT INTO products (product_id, product_name, product_price)
