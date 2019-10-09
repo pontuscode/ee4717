@@ -8,7 +8,7 @@ function insert_table_row($id) {
 	$sql = "SELECT product_price FROM javajam.products WHERE product_id = $id;";
 	if ($result = mysqli_query($conn, $sql)) {
 		$row = mysqli_fetch_row($result);
-		echo " $" . number_format((float)$row[0], 2, '.', '');
+		echo number_format((float)$row[0], 2, '.', '');
 	} else {
 		echo "Failed fetching data from database.";
 	}

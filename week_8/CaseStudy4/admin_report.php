@@ -1,6 +1,3 @@
-<?php 
-include "scripts/php/generatereport.php";
-?>
 <head>
     <meta charset="UTF-8">
     <title>JavaJam Admin - Main Page</title>
@@ -23,8 +20,11 @@ include "scripts/php/generatereport.php";
     </div>
     <div class="content">
         <h1>Click to generate daily sales report:<br></h1>
-        <label style="font-weight: bold; font-size: 24px; font-family: Arial, sans-serif;"><input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;Total dollar sales by product<br></label>
-        <label style="font-weight: bold; font-size: 24px; font-family: Arial, sans-serif;"><input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;Sales quantities by product categories<br></label>
+		<form action="scripts/php/generatereport.php" method="get">
+			<label style="font-weight: bold; font-size: 24px; font-family: Arial, sans-serif;"><input name="report" value="total" type="radio" checked>&nbsp;&nbsp;&nbsp;&nbsp;Total dollar sales by product<br></label>
+			<label style="font-weight: bold; font-size: 24px; font-family: Arial, sans-serif;"><input name="report" value="quant" type="radio">&nbsp;&nbsp;&nbsp;&nbsp;Sales quantities by product categories<br><br></label>
+			<input type="submit" value="Generate report">
+		</form>
     </div>
 </div>
 <footer><br>Copyright &copy; 2014 JavaJam Coffee House<br>

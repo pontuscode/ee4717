@@ -31,7 +31,7 @@ include "scripts/php/filltable.php";
                     </td>
                     <th>Just Java</th>
                     <td>Regular house blend, decaffeinated coffee, or flavor of the day. <br>
-                       Endless cup <span id="regularPrice"></span><input style="width:40px;" step="0.01" formnovalidate type="hidden" id="regular" name="regular">
+                       Endless cup $<span id="regularPrice"></span><input style="width:40px;" step="0.01" formnovalidate type="hidden" id="regular" name="regular">
 					   <?php insert_table_row(1) ?>
                     </td>
                 </tr>
@@ -41,9 +41,9 @@ include "scripts/php/filltable.php";
                     </td>
                     <th>Cafe au Lait</th>
                     <td>House blended coffee infused into a smooth, steamed milk.<br>
-                        Single <span id="cafeLowPrice"></span><input style="width: 40px;" step="0.01" type="hidden" id="smallCafe" name="smallCafe">
+                        Single $<span id="cafeLowPrice"></span><input style="width: 40px;" step="0.01" type="hidden" id="smallCafe" name="smallCafe">
 						<?php insert_table_row(2) ?>
-                        Double <span id="cafeHighPrice"></span><input style="width: 40px;" step="0.01" type="hidden" id="largeCafe" name="largeCafe">
+                        Double $<span id="cafeHighPrice"></span><input style="width: 40px;" step="0.01" type="hidden" id="largeCafe" name="largeCafe">
 						<?php insert_table_row(3) ?>
                     </td>
                 </tr>
@@ -53,9 +53,9 @@ include "scripts/php/filltable.php";
                     </td>
                     <th>Iced Cappuccino</th>
                     <td>Sweetened espresso blended with icy-cold milk and served in a chilled glass<br>
-                        Single <span id="cappuccinoLowPrice"></span><input style="width: 40px;" step="0.01" type="hidden" id="smallCappuccino" name="smallCappuccino">
+                        Single $<span id="cappuccinoLowPrice"></span><input style="width: 40px;" step="0.01" type="hidden" id="smallCappuccino" name="smallCappuccino">
 						<?php insert_table_row(4) ?>
-                        Double <span id="cappuccinoHighPrice"></span><input style="width: 40px;" step="0.01" type="hidden" id="largeCappuccino" name="largeCappuccino">
+                        Double $<span id="cappuccinoHighPrice"></span><input style="width: 40px;" step="0.01" type="hidden" id="largeCappuccino" name="largeCappuccino">
 						<?php insert_table_row(5) ?>	
                 </tr>
                 <tr>

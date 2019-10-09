@@ -43,10 +43,30 @@ if (!mysqli_query($conn, $sql)) { //If the DB doesn't exist, we need to create i
 	)";
 
 	if (!mysqli_query($conn, $sql)) {
-		echo "Error creating table: " . mysqli_error($conn);
+		echo "Error creating Products table: " . mysqli_error($conn);
 		mysqli_close($conn);
 	}
 
+	$sql = "CREATE TABLE orders (
+								 order_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+								 product_id INT UNSIGNED, 
+								 quantity INT, 
+								 FOREIGN KEY (product_id) REFERENCES products(product_id)
+								 )";
+	if (!mysqli_query($conn, $sql)) {
+		echo "Error creating Orders table: " . mysqli_error($conn);
+		mysqli_close($conn);
+	}
+	$sql = "CREATE TABLE total_sales (
+									  product_id INT UNSIGNED PRIMARY KEY, 
+									  totals DOUBLE,
+									  FOREIGN KEY (product_id) REFERENCES products(product_id)
+									  )";
+	if (!mysqli_query($conn, $sql)) {
+		echo "Error creating Total sales table: " . mysqli_error($conn);
+		mysqli_close($conn);
+	}
+	
 	//Fill tables with data
 
 	$sql = "INSERT INTO products (product_id, product_name, product_price)
@@ -59,11 +79,22 @@ if (!mysqli_query($conn, $sql)) { //If the DB doesn't exist, we need to create i
 	VALUES (NULL, 'Small Cappuccino', 4.75);";
 	$sql .= "INSERT INTO products (product_id, product_name, product_price)
 	VALUES (NULL, 'Large Cappuccino', 5.75);";
-
+	
+	$sql .= "INSERT INTO total_sales (product_id, totals)
+	VALUES (1, 0.0);";
+	$sql .= "INSERT INTO total_sales (product_id, totals)
+	VALUES (2, 0.0);";
+	$sql .= "INSERT INTO total_sales (product_id, totals)
+	VALUES (3, 0.0);";
+	$sql .= "INSERT INTO total_sales (product_id, totals)
+	VALUES (4, 0.0);";
+	$sql .= "INSERT INTO total_sales (product_id, totals)
+	VALUES (5, 0.0);";
 	if (!mysqli_multi_query($conn, $sql)) {
 		echo "Failed to fill tables with data: " . mysqli_error($conn);
 		mysqli_close($conn);
 	}
+
 }
 mysqli_close($conn);
 ?>

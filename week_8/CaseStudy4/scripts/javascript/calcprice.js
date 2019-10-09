@@ -3,24 +3,24 @@ var priceArray = [0.0,0.0,0.0];
 function calculatePrice(id){
     switch(id){
         case 1:
-            priceArray[0] = 2.0*getQuantity(id);
+            priceArray[0] = getPrice(1)*getQuantity(id);
             document.getElementById("regularTotal").innerHTML = priceArray[0].toFixed(2);
             break;
         case 2:
-            if(document.getElementById("cafeLow").checked){
-                priceArray[1] = 2.0*getQuantity(id);
+            if(document.getElementById("smallCafe").checked){
+                priceArray[1] = getPrice(2)*getQuantity(id);
             }
             else {
-                priceArray[1] = 3.0*getQuantity(id);
+                priceArray[1] = getPrice(3)*getQuantity(id);
             }
             document.getElementById("cafeTotal").innerHTML = priceArray[1].toFixed(2);
             break;
         case 3:
-            if(document.getElementById("cappuccinoLow").checked){
-                priceArray[2] = 4.75*getQuantity(id);
+            if(document.getElementById("smallCappuccino").checked){
+                priceArray[2] = getPrice(4)*getQuantity(id);
             }
             else{
-                priceArray[2] = 5.75*getQuantity(id);
+                priceArray[2] = getPrice(5)*getQuantity(id);
             }
             document.getElementById("cappuccinoTotal").innerHTML = priceArray[2].toFixed(2);
             break;
@@ -41,13 +41,23 @@ function getQuantity(id){
     }
 }
 
-function placeOrder(){
-    alert(calculateTotal());
+function getPrice(id){
+	switch(id){
+		case 1:
+			return (parseFloat(document.getElementById("regularPrice").textContent));
+		case 2:
+			return (parseFloat(document.getElementById("smallCafePrice").textContent));
+		case 3:
+			return (parseFloat(document.getElementById("largeCafePrice").textContent));
+		case 4:
+			return (parseFloat(document.getElementById("smallCappuccinoPrice").textContent));
+		case 5:
+			return (parseFloat(document.getElementById("largeCappuccinoPrice").textContent));
+	}
 }
 function init(){
-    for(i = 1; i <=3; i++){
-        calculatePrice(i);
-    }
-    calculateTotal();
+	priceArray[0] = getPrice(1);
+	priceArray[1] = getPrice(2);
+	priceArray[2] = getPrice(4);
 }
 window.onload=init;
