@@ -7,7 +7,7 @@ include "scripts/php/filltable.php";
     <link rel="stylesheet" href="stylesheet.css">
     <script type="text/javascript" src="scripts/javascript/calcprice.js"></script>
 </head>
-<body>
+<body onload="init();">
 <header>
 
 </header>
@@ -16,7 +16,7 @@ include "scripts/php/filltable.php";
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
+                <li><a href="menu.php">Menu</a></li>
                 <li><a href="music.html">Music</a></li>
                 <li><a href="jobs.html">Jobs</a></li>
             </ul>

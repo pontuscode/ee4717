@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58faad79-eb33-4832-8cc4-e5fbde46ed53" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/week_7/CaseStudyPt4/scripts/php/setupdb.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week_8/CaseStudy4/scripts/php/updateDB.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week_8/CaseStudy4/scripts/php/setupdb.php" beforeDir="false" afterPath="$PROJECT_DIR$/week_8/CaseStudy4/scripts/php/setupdb.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,6 +82,8 @@
       <workItem from="1570339743043" duration="1596000" />
       <workItem from="1570504894361" duration="1669000" />
       <workItem from="1570526228506" duration="6496000" />
+      <workItem from="1570637155695" duration="234000" />
+      <workItem from="1570637449772" duration="4000" />
     </task>
     <servers />
   </component>

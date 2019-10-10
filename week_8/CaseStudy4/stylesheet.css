@@ -104,6 +104,11 @@ nav a {
     border-spacing:2px;
     margin-left:50px;
 }
+.reporttable {
+	font-weight: bold; 
+	font-size: 24px; 
+	font-family: Arial, sans-serif;
+}
 tr:nth-of-type(odd) {
     background-color: #CDB591;
 }

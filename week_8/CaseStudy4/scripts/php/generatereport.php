@@ -1,4 +1,5 @@
 <?php 
+
 $report=$_GET['report'];
 
 if ($report == "total") {
@@ -8,8 +9,6 @@ if ($report == "total") {
 } else {
 	echo "something went wrong";
 }
-
-return;
 
 function totalReport() {
 	$conn = mysqli_connect("localhost", "f32ee", "f32ee");
@@ -22,10 +21,16 @@ function totalReport() {
 	if (!$result = mysqli_query($conn, $sql)) {
 		echo "Failed to get total sales: " . mysqli_error($conn);
 	}
-	for($i = 0; $i < $result->num_rows; $i++) {
+	for($i = 1; $i <= $result->num_rows; $i++) {
 		$row = $result->fetch_assoc();
-		echo "Product id: " . $row['product_id'] . "     Total sales: $" . $row['totals'] . "<br>";
+		$sql = "SELECT product_name FROM javajam.products WHERE product_id = $i;";
+		if (!$name = mysqli_query($conn, $sql)) {
+			echo "Failed to get product name when loading Quantity report" . mysqli_error($conn);
+		}
+		$name = mysqli_fetch_row($name);
+		echo "$name[0]: " . "$" . $row['totals'] . "<br>";
 	}
+	return;
 }
 
 function quantReport() {
@@ -35,14 +40,19 @@ function quantReport() {
 		die("Connection failed: " . mysqli_connect_error());
 		return;
 	}
-	$sql = "SELECT * FROM javajam.orders GROUP BY product_id;";
+	$sql = "SELECT product_id, sum(quantity) FROM javajam.orders GROUP BY product_id;";
 	if (!$result = mysqli_query($conn, $sql)) {
 		echo "Failed to get sales quantity: " . mysqli_error($conn);
 	}
-	for($i = 0; $i < $result->num_rows; $i++) {
+	for($i = 1; $i <= $result->num_rows; $i++) {
 		$row = $result->fetch_assoc();
-		echo "Product id: " . $row['product_id'] . "    Quantity: " . $row['quantity'] . "<br>";
+		$sql = "SELECT product_name FROM javajam.products WHERE product_id = $i;";
+		if (!$name = mysqli_query($conn, $sql)) {
+			echo "Failed to get product name when loading Quantity report" . mysqli_error($conn);
+		}
+		$name = mysqli_fetch_row($name);
+		echo "$name[0]: " .  $row['sum(quantity)'] . "<br>";
 	}
+	return;
 }
-
 ?>

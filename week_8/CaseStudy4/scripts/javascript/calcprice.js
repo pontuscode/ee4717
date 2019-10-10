@@ -56,8 +56,8 @@ function getPrice(id){
 	}
 }
 function init(){
-	priceArray[0] = getPrice(1);
-	priceArray[1] = getPrice(2);
-	priceArray[2] = getPrice(4);
+	document.getElementById("regularTotal").innerHTML = priceArray[0].toFixed(2);
+	document.getElementById("cafeTotal").innerHTML = priceArray[1].toFixed(2);
+	document.getElementById("cappuccinoTotal").innerHTML = priceArray[2].toFixed(2);
+	document.getElementById("totalPrice").innerHTML = calculateTotal().toFixed(2);
 }
-window.onload=init;

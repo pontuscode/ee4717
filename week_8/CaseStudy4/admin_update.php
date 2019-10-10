@@ -15,7 +15,7 @@ include "scripts/php/filltable.php";
     <div class="navbar">
         <nav>
             <ul style="color:#000000; font-weight: bold;font-size:large;font-family: Arial, sans-serif;">
-                <li><a href="admin.html"><< Go back</a></li>
+                <li><a href="admin.php"><< Go back</a></li>
                 <li>Product Price</li>
                 <li>Update</li>
             </ul>
