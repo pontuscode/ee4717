@@ -6,40 +6,66 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-<div>
     <header>
         Welcome to a new world of Durian cuisine.
     </header>
     <div class="navbar">
         <a href="index.html">
-            <div class="navbar_element_even">
+            <div class="navbar_element" style="margin-right: 1%;">
                 Home
             </div>
         </a>
         <a href="menu.html">
-            <div class="navbar_element_odd">
+            <div class="navbar_element" style="margin-right: 1%;">
                 Menu
             </div>
         </a>
         <a href="deals.html">
-            <div class="navbar_element_even">
+            <div class="navbar_element" style="margin-right: 1%;">
                 Today's deals
             </div>
         </a>
         <a href="jobs.html">
-            <div class="navbar_element_odd">
+            <div class="active_element">
                 Jobs
             </div>
         </a>
     </div>
-    <div>
-        <p>
-            You're gonna love it!
-        </p>
+    <div class="wrapper">
+        <h2 class="centeredheader">
+            Open job offers
+        </h2>
+        <div class="jobwrapper">
+            <div class="jobimage">
+                <img src="media/pics/pizza-maker.png" style="width:100%;height:100%;">
+            </div>
+            <div class="jobtext">
+                We need an experienced baker to help us cope with ever-increasing demands!<br>
+                Are you who we're looking for? Apply now!
+            </div>
+            <div class="jobapplication">
+                <form action="jobapplication.html">
+                    <input class="jobsubmit" type="submit" value="Apply now">
+                </form>
+            </div>
+        </div>
+        <div class="jobwrapper">
+            <div class="jobimage">
+                <img src="media/pics/delivery-guy.png" style="width:100%;height:100%;">
+            </div>
+            <div class="jobtext">
+                No driver's license required, we will handle the fines! Just show up and start delivering!<br>
+                Sound interesting? Apply now!
+            </div>
+            <div class="jobapplication">
+                <form action="jobapplication.html">
+                    <input class="jobsubmit" type="submit" value="Apply now">
+                </form>
+            </div>
+        </div>
     </div>
     <footer>
         <p style="font-size: small;font-style: italic;">Copyright &copy; The Durian Company 2019.</p>
     </footer>
-</div>
 </body>
 </html>
