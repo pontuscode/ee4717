@@ -1,8 +1,7 @@
 /* ========================================== CSS FOR HTML ELEMENTS ====================================== */
 
 body {
-    /*background: url("media/pics/header_pic.jpg") center center fixed;*/
-    background-color: #FFFFFF;
+    background: url("media/pics/header_pic.jpg") center center fixed;
     background-size:cover;
 }
 header {
@@ -31,7 +30,7 @@ td {
 /* ========================================== CSS FOR ALL PAGES ====================================== */
 
 .wrapper {
-    height:100%;
+    height:auto;
     width:99%;
     display:inline-block;
 }
@@ -121,19 +120,24 @@ td {
 /* ========================================== CSS FOR MENU ====================================== */
 
 .menusubmit {
+    margin-left:910px;
     margin-top:20px;
-    float: right;
 }
 #menutable {
+	width:50%;
     margin-left:25%;
     background-color:#5c743d;
     color:#000033;
+	border:double;
 }
-
-#price_and_cart {
-    width: 174px;
-    padding: 20px 34px 0 0;
-    float: right;
+.category_header {
+	border:none;
+	font-size:30px;
+}
+.category_description {
+	text-align: center;
+	font-style:italic;
+	border:none;
 }
 
 /* ========================================== CSS FOR DEALS ====================================== */

@@ -4,7 +4,8 @@ use f32ee;
 
 CREATE TABLE IF NOT EXISTS de_category (
 category_id INT UNSIGNED PRIMARY KEY,
-category_name VARCHAR(30)
+category_name VARCHAR(30),
+category_description VARCHAR(500)
 );
 
 CREATE TABLE IF NOT EXISTS de_products (
@@ -12,6 +13,7 @@ product_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 product_name VARCHAR(30) NOT NULL,
 product_price DOUBLE NOT NULL,
 product_category INT UNSIGNED,
+product_description VARCHAR(500),
 CONSTRAINT FOREIGN KEY(product_category) REFERENCES de_category(category_id)
 );
 
@@ -44,21 +46,22 @@ email VARCHAR(40),
 CONSTRAINT FOREIGN KEY fk_applicant(applied_for) REFERENCES de_positions(position_id)
 );
 
-INSERT INTO f32ee.de_category (category_id, category_name) VALUES (1, "Pizza");
-INSERT INTO f32ee.de_category (category_id, category_name) VALUES (2, "Salad");
-INSERT INTO f32ee.de_category (category_id, category_name) VALUES (3, "Drink");
-INSERT INTO f32ee.de_category (category_id, category_name) VALUES (4, "Dessert");
+INSERT INTO f32ee.de_category (category_id, category_name, category_description) VALUES (1, "Pizza", "All pizzas include durian, mozzarella, and tomato sauce.");
+INSERT INTO f32ee.de_category (category_id, category_name, category_description) VALUES (2, "Salad", "All salads include durian, iceberg lettuce, tomatoes, and cucumber.");
+INSERT INTO f32ee.de_category (category_id, category_name, category_description) VALUES (3, "Drink", "All drinks include durian and ice as standard.");
+INSERT INTO f32ee.de_category (category_id, category_name, category_description) VALUES (4, "Dessert", "All desserts include durian as standard.");
 
-INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_category) VALUES (NULL, "The Original", 12.95, 1);
-INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_category) VALUES (NULL, "Tutti Frutti", 15.95, 1);
-INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_category) VALUES (NULL, "Meatzza", 21.95, 1);
-INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_category) VALUES (NULL, "Durian Overload", 23.95, 1);
-INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_category) VALUES (NULL, "Peanut pizza", 14.95, 1);
-INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_category) VALUES (NULL, "Salad", 9.95, 2);
-INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_category) VALUES (NULL, "Juicy Lucy", 2.95, 3);
-INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_category) VALUES (NULL, "Hot mess", 1.95, 3);
-INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_category) VALUES (NULL, "Milkshake", 3.95, 4);
-INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_category) VALUES (NULL, "Pudding", 4.95, 4);
+INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_description, product_category) VALUES (NULL, "The Original", 12.95, "Ham", 1);
+INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_description, product_category) VALUES (NULL, "Tutti Frutti", 15.95, "Mango, Pineapple, Banana, Curry powder", 1);
+INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_description, product_category) VALUES (NULL, "Meatzza", 21.95, "Ham, Pepperoni, Bacon, Chicken", 1);
+INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_description, product_category) VALUES (NULL, "Durian Overload", 23.95, "Extra Durian, Extra Cheese", 1);
+INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_description, product_category) VALUES (NULL, "Peanut pizza", 14.95, "Peanuts, Banana", 1);
+INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_description, product_category) VALUES (NULL, "Greek Salad", 9.95, "Feta cheese, Olives, Red bellpepper", 2);
+INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_description, product_category) VALUES (NULL, "Mango Juice", 4.95, "Mango/Durian Juice", 3);
+INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_description, product_category) VALUES (NULL, "Watermelon Juice", 2.95, "Watermelon/Durian Juice", 3);
+INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_description, product_category) VALUES (NULL, "Hot mess", 1.95, "Warm durian drink", 3);
+INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_description, product_category) VALUES (NULL, "Chocolate Milkshake", 3.95, "Chocolate/Durian milkshake", 4);
+INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_description, product_category) VALUES (NULL, "Lemon Pudding", 4.95, "Lemon/Durian pudding",  4);
 
 INSERT INTO f32ee.de_positions (position_id, position_name, position_salary) VALUES (1, "Cook", 1000);
 INSERT INTO f32ee.de_positions (position_id, position_name, position_salary) VALUES (2, "Manager", 1500);
