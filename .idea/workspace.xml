@@ -28,7 +28,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="C:/Apache24/htdocs/project" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
@@ -86,7 +86,7 @@
       <workItem from="1571036858183" duration="3101000" />
       <workItem from="1571126064971" duration="9933000" />
       <workItem from="1571293128645" duration="62000" />
-      <workItem from="1571293210794" duration="1108000" />
+      <workItem from="1571293210794" duration="1406000" />
     </task>
     <servers />
   </component>
@@ -95,6 +95,7 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.php" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sql" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
