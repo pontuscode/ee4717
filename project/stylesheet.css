@@ -1,7 +1,8 @@
 /* ========================================== CSS FOR HTML ELEMENTS ====================================== */
 
 body {
-    background: url("media/pics/header_pic.jpg") center center fixed;
+    /*background: url("media/pics/header_pic.jpg") center center fixed;*/
+    background-color: #FFFFFF;
     background-size:cover;
 }
 header {
@@ -120,13 +121,19 @@ td {
 /* ========================================== CSS FOR MENU ====================================== */
 
 .menusubmit {
-    margin-left:910px;
     margin-top:20px;
+    float: right;
 }
 #menutable {
     margin-left:25%;
     background-color:#5c743d;
     color:#000033;
+}
+
+#price_and_cart {
+    width: 174px;
+    padding: 20px 34px 0 0;
+    float: right;
 }
 
 /* ========================================== CSS FOR DEALS ====================================== */
