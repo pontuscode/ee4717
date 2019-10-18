@@ -53,7 +53,7 @@ include "php/get_menu_info.php";
                     <td> <?php echo $product_description_1; ?> </td>
                     <td> <?php echo "$";?><span id="product_1"><?php echo $product_price_1;?></span></td>
                     <td>
-                        <input class="numberinput" type="number" id="numinput1" min="0" value="0" onchange="updatePrice(<?php echo $product_name_1; ?>, <?php echo $product_price_1;?>)">
+                        <input class="numberinput" type="number" id="numinput1" min="0" value=0 onchange="updatePrice('numinput1','<?php echo $product_name_1; ?>', <?php echo $product_price_1;?>)">
                     </td>
                 </tr>
                 <tr>
@@ -61,7 +61,7 @@ include "php/get_menu_info.php";
                     <td> <?php echo $product_description_2; ?> </td>
                     <td> <?php echo "$";?><span id="product_2"><?php echo $product_price_2;?></span></td>
                     <td>
-                        <input class="numberinput" type="number" id="numinput2" min="0" value="0" onchange="updatePrice(<?php echo $product_name_2; ?>, <?php echo $product_price_2;?>)">
+                        <input class="numberinput" type="number" id="numinput2" min="0" value=0 onchange="updatePrice('numinput2','<?php echo $product_name_2; ?>', <?php echo $product_price_2;?>)">
                     </td>
                 </tr>
                 <tr>
@@ -69,7 +69,7 @@ include "php/get_menu_info.php";
                     <td> <?php echo $product_description_3; ?> </td>
                     <td> <?php echo "$";?><span id="product_3"><?php echo $product_price_3;?></span></td>
                     <td>
-                        <input class="numberinput" type="number" min="0" id="numinput3" value="0" onchange="updatePrice(<?php echo $product_name_3; ?>, <?php echo $product_price_3;?>)">
+                        <input class="numberinput" type="number" min="0" id="numinput3" value=0 onchange="updatePrice('numinput3','<?php echo $product_name_3; ?>', <?php echo $product_price_3;?>)">
                     </td>
                 </tr>
                 <tr>
@@ -77,7 +77,7 @@ include "php/get_menu_info.php";
                     <td> <?php echo $product_description_4; ?> </td>
                     <td> <?php echo "$";?><span id="product_4"></span><?php echo $product_price_4; ?> </td>
                     <td>
-                        <input class="numberinput" type="number" id="numinput4" min="0" value="0" onchange="updatePrice(<?php echo $product_name_4; ?>, <?php echo $product_price_4;?>)">
+                        <input class="numberinput" type="number" id="numinput4" min="0" value=0 onchange="updatePrice('numinput4','<?php echo $product_name_4; ?>', <?php echo $product_price_4;?>)">
                     </td>
                 </tr>
                 <tr>
@@ -85,7 +85,7 @@ include "php/get_menu_info.php";
                     <td> <?php echo $product_description_5; ?> </td>
                     <td> <?php echo "$";?><span id="product_5"></span><?php echo $product_price_5; ?> </td>
                     <td>
-                        <input class="numberinput" type="number" id="numinput5" min="0" value="0" onchange="updatePrice(<?php echo $product_name_5; ?>, <?php echo $product_price_5;?>)">
+                        <input class="numberinput" type="number" id="numinput5" min="0" value=0 onchange="updatePrice('numinput5','<?php echo $product_name_5; ?>', <?php echo $product_price_5;?>)">
                     </td>
                 </tr>
 				<tr>
@@ -99,7 +99,7 @@ include "php/get_menu_info.php";
                     <td> <?php echo $product_description_6; ?> </td>
                     <td> <?php echo "$";?><span id="product_6"><?php echo $product_price_6;?></span></td>
                     <td>
-                        <input class="numberinput" type="number" id="numinput6" min="0" value="0" onchange="updatePrice(<?php echo $product_name_6; ?>, <?php echo $product_price_6;?>)">
+                        <input class="numberinput" type="number" id="numinput6" min="0" value=0 onchange="updatePrice('numinput6','<?php echo $product_name_6; ?>', <?php echo $product_price_6;?>)">
                     </td>
                 </tr>
                 <tr>
@@ -113,7 +113,7 @@ include "php/get_menu_info.php";
                     <td> <?php echo $product_description_7; ?> </td>
                     <td> <?php echo "$";?><span id="product_7"><?php echo $product_price_7;?></span></td>
                     <td>
-                        <input class="numberinput" type="number" id="numinput7" min="0" value="0" onchange="updatePrice(<?php echo $product_name_7; ?>. <?php echo $product_price_7;?>)">
+                        <input class="numberinput" type="number" id="numinput7" min="0" value=0 onchange="updatePrice('numinput7','<?php echo $product_name_7; ?>'. <?php echo $product_price_7;?>)">
                     </td>
                 </tr>
                 <tr>
@@ -121,7 +121,7 @@ include "php/get_menu_info.php";
                     <td> <?php echo $product_description_8; ?> </td>
                     <td> <?php echo "$";?><span id="product_8"><?php echo $product_price_8;?></span></td>
                     <td>
-                        <input class="numberinput" type="number" id="numinput8" min="0" value="0" onchange="updatePrice(<?php echo $product_name_8; ?>, <?php echo $product_price_8;?>)">
+                        <input class="numberinput" type="number" id="numinput8" min="0" value=0 onchange="updatePrice('numinput8','<?php echo $product_name_8; ?>', <?php echo $product_price_8;?>)">
                     </td>
                 </tr>
                 <tr>
@@ -129,7 +129,7 @@ include "php/get_menu_info.php";
                     <td> <?php echo $product_description_9; ?> </td>
                     <td> <?php echo "$";?><span id="product_9"><?php echo $product_price_9;?></span></td>
                     <td>
-                        <input class="numberinput" type="number" id="numinput9" min="0" value="0" onchange="updatePrice(<?php echo $product_name_9; ?>, <?php echo $product_price_9;?>)">
+                        <input class="numberinput" type="number" id="numinput9" min="0" value=0 onchange="updatePrice('numinput9', '<?php echo $product_name_9; ?>', <?php echo $product_price_9;?>)">
                     </td>
                 </tr>
 				<tr>
@@ -143,7 +143,7 @@ include "php/get_menu_info.php";
                     <td> <?php echo $product_description_10; ?> </td>
                     <td> <?php echo "$";?><span id="product_10"><?php echo $product_price_10;?></span></td>
                     <td>
-                        <input class="numberinput" type="number" id="numinput10" min="0" value="0" onchange="updatePrice(<?php echo $product_name_10; ?>, <?php echo $product_price_10;?>)">
+                        <input class="numberinput" type="number" id="numinput10" min="0" value=0 onchange="updatePrice('numinput10','<?php echo $product_name_10; ?>', <?php echo $product_price_10;?>)">
                     </td>
                 </tr>
             </table>
