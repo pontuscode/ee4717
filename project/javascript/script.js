@@ -39,11 +39,15 @@ function validateDate() {
 }
 
 /*
-* To update the total price, we do not simply add all the individual prices together, as
-* that would require hard-coding each item in this function and would require a sub-price
-* for each item. It would also be less efficient. Instead, our solution only adds or
-* removes directly from the total price by looking at whether we increased the quantity of
-* the product or decreased it.
+* To update the total price, we add or remove directly from the total price by looking at whether we increased
+* the quantity of the product or decreased it.
+*
+* The alternative is to add all the sub-prices together every time we change the quantity of any item. This
+* solution would not only require hard-coding each item in this function (less scalable) and would require a
+* sub-price to be stored for each item (memory), it would also be less efficient in terms of computing power.
+*
+* Having a general "updatePrice"-solution also can be used by all the pages to update the price of the cart,
+* not just the menu.
 * */
 function updatePrice(quantity_box_id, item_name, item_price) {
     // static map containing all selected items
@@ -58,17 +62,16 @@ function updatePrice(quantity_box_id, item_name, item_price) {
 
     // this is to check what the quantity WAS (before the change).
     // get the quantity value if it is in there, else we add the product.
-    var old_quantity = 0;
-    if (items.has(item_name))
-        old_quantity = items.get(item_name)[1];
-    else
+    if (items.has(item_name)) {
+        var old_quantity = items.get(item_name)[1];
+    }
+    else {
         items.set(item_name, [item_price, 0]);
+        var old_quantity = 0;
+    }
 
     // scalar depending on if we added or removed from the quantity
-    if (new_quantity > old_quantity)
-        var scalar = 1;
-    else
-        var scalar = -1;
+    var scalar = ((new_quantity > old_quantity) ?  1 : -1);
 
     // update the new product quantity in the map
     items.set(item_name, [item_price, items.get(item_name)[1] + scalar]);
@@ -79,4 +82,8 @@ function updatePrice(quantity_box_id, item_name, item_price) {
     document.getElementById('menu_total_price').innerHTML = new_total;
 }
 
+/*
+* Note: the "total price" boxes on all pages should reflect (import) the total price of the cart. That way,
+* "updatepPrice" can be used for all pages.
+* */
 
