@@ -1,4 +1,6 @@
 -- Category 1: Pizza; Category 2: Salad; Category 3: Drinks; Category 4: Desserts;
+-- source C:\Users\lukpo\Dropbox\Project\ee4717\project\sql\setupdb.sql
+
 CREATE DATABASE IF NOT EXISTS f32ee;
 use f32ee;
 

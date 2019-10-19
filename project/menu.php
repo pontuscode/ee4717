@@ -50,7 +50,7 @@ include "php/get_menu_info.php";
                 <tr>
                     <th> <?php echo $product_name_1; ?> </th>
                     <td> <?php echo $product_description_1; ?> </td>
-                    <td> <?php echo "$" . $product_price_1; ?> </td>
+                    <td> <?php echo "$";?> <?php$product_price_1; ?> </td>
                     <td>
                         <input class="numberinput" type="number" min="0" value="0">
                     </td>
@@ -58,7 +58,7 @@ include "php/get_menu_info.php";
                 <tr>
                     <th> <?php echo $product_name_2; ?> </th>
                     <td> <?php echo $product_description_2; ?> </td>
-                    <td> <?php echo "$" . $product_price_2; ?> </td>
+                    <td> <?php echo "$";?> <?php$product_price_2; ?> </td>
                     <td>
                         <input class="numberinput" type="number" min="0" value="0">
                     </td>
@@ -66,7 +66,7 @@ include "php/get_menu_info.php";
                 <tr>
                     <th> <?php echo $product_name_3; ?> </th>
                     <td> <?php echo $product_description_3; ?> </td>
-                    <td> <?php echo "$" . $product_price_3; ?> </td>
+                    <td> <?php echo "$";?> <?php$product_price_3; ?> </td>
                     <td>
                         <input class="numberinput" type="number" min="0" value="0">
                     </td>
@@ -74,7 +74,7 @@ include "php/get_menu_info.php";
                 <tr>
                     <th> <?php echo $product_name_4; ?> </th>
                     <td> <?php echo $product_description_4; ?> </td>
-                    <td> <?php echo "$" . $product_price_4; ?> </td>
+                    <td> <?php echo "$";?> <?php$product_price_4; ?> </td>
                     <td>
                         <input class="numberinput" type="number" min="0" value="0">
                     </td>
@@ -82,7 +82,7 @@ include "php/get_menu_info.php";
                 <tr>
                     <th> <?php echo $product_name_5; ?> </th>
                     <td> <?php echo $product_description_5; ?> </td>
-                    <td> <?php echo "$" . $product_price_5; ?> </td>
+                    <td> <?php echo "$";?> <?php$product_price_5; ?> </td>
                     <td>
                         <input class="numberinput" type="number" min="0" value="0">
                     </td>
@@ -96,7 +96,7 @@ include "php/get_menu_info.php";
                 <tr>
                     <th> <?php echo $product_name_6; ?> </th>
                     <td> <?php echo $product_description_6; ?> </td>
-                    <td> <?php echo "$" . $product_price_6; ?> </td>
+                    <td> <?php echo "$";?> <?php$product_price_6; ?> </td>
                     <td>
                         <input class="numberinput" type="number" min="0" value="0">
                     </td>
@@ -110,7 +110,7 @@ include "php/get_menu_info.php";
 				</tr>
                     <th> <?php echo $product_name_7; ?> </th>
                     <td> <?php echo $product_description_7; ?> </td>
-                    <td> <?php echo "$" . $product_price_7; ?> </td>
+                    <td> <?php echo "$";?> <?php$product_price_7; ?> </td>
                     <td>
                         <input class="numberinput" type="number" min="0" value="0">
                     </td>
@@ -118,7 +118,7 @@ include "php/get_menu_info.php";
                 <tr>
                     <th> <?php echo $product_name_8; ?> </th>
                     <td> <?php echo $product_description_8; ?> </td>
-                    <td> <?php echo "$" . $product_price_8; ?> </td>
+                    <td> <?php echo "$";?> <?php$product_price_8; ?> </td>
                     <td>
                         <input class="numberinput" type="number" min="0" value="0">
                     </td>
@@ -126,7 +126,7 @@ include "php/get_menu_info.php";
                 <tr>
                     <th> <?php echo $product_name_9; ?> </th>
                     <td> <?php echo $product_description_9; ?> </td>
-                    <td> <?php echo "$" . $product_price_9; ?> </td>
+                    <td> <?php echo "$";?> <?php$product_price_9; ?> </td>
                     <td>
                         <input class="numberinput" type="number" min="0" value="0">
                     </td>
@@ -140,7 +140,7 @@ include "php/get_menu_info.php";
 				<tr>
                     <th> <?php echo $product_name_10; ?> </th>
                     <td> <?php echo $product_description_10; ?> </td>
-                    <td> <?php echo "$" . $product_price_10; ?> </td>
+                    <td> <?php echo "$";?> <?php$product_price_10; ?> </td>
                     <td>
                         <input class="numberinput" type="number" min="0" value="0">
                     </td>
