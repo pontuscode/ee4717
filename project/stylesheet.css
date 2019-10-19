@@ -120,8 +120,8 @@ td {
 /* ========================================== CSS FOR MENU ====================================== */
 
 .menusubmit {
-    margin-left:910px;
     margin-top:20px;
+    float: right;
 }
 #menutable {
 	width:50%;
@@ -130,6 +130,13 @@ td {
     color:#000033;
 	border:double;
 }
+
+#price_and_cart {
+    width: 174px;
+    padding: 20px 34px 0 0;
+    float: right;
+}
+
 .category_header {
 	border:none;
 	font-size:30px;
