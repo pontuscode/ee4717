@@ -113,7 +113,7 @@ include "php/get_menu_info.php";
                     <td> <?php echo $product_description_7; ?> </td>
                     <td> <?php echo "$";?><span id="product_7"><?php echo $product_price_7;?></span></td>
                     <td>
-                        <input class="numberinput" type="number" id="numinput7" min="0" value=0 onchange="updatePrice('numinput7','<?php echo $product_name_7; ?>'. <?php echo $product_price_7;?>)">
+                        <input class="numberinput" type="number" id="numinput7" min="0" value=0 onchange="updatePrice('numinput7','<?php echo $product_name_7; ?>', <?php echo $product_price_7;?>)">
                     </td>
                 </tr>
                 <tr>
