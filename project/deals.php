@@ -22,7 +22,7 @@
         </a>
         <a href="deals.html">
             <div class="active_element" style="margin-right: 1%;">
-                Today's deals
+                Todays deals
             </div>
         </a>
         <a href="jobs.html">

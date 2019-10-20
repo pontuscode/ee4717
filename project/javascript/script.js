@@ -81,9 +81,3 @@ function updatePrice(quantity_box_id, item_name, item_price) {
     var new_total = (parseFloat(current_total) + scalar * parseFloat(item_price)).toFixed(2);
     document.getElementById('menu_total_price').innerHTML = new_total;
 }
-
-/*
-* Note: the "total price" boxes on all pages should reflect (import) the total price of the cart. That way,
-* "updatepPrice" can be used for all pages.
-* */
-
