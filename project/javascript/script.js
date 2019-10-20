@@ -52,7 +52,7 @@ function validateDate() {
 function updatePrice(quantity_box_id, item_name, item_price) {
     // static map containing all selected items
     // key: item_name
-    // value: {item_quantity, item_price}
+    // value: {item_price, old_quantity}
     if( typeof items == 'undefined' ) {
         items = new Map();
     }
@@ -61,23 +61,53 @@ function updatePrice(quantity_box_id, item_name, item_price) {
     var new_quantity = parseInt(document.getElementById('' + quantity_box_id).value);
 
     // this is to check what the quantity WAS (before the change).
-    // get the quantity value if it is in there, else we add the product.
-    if (items.has(item_name)) {
-        var old_quantity = items.get(item_name)[1];
-    }
-    else {
-        items.set(item_name, [item_price, 0]);
-        var old_quantity = 0;
-    }
+    var old_quantity = (items.has(item_name) ? items.get(item_name)[1] : 0);
 
     // scalar depending on if we added or removed from the quantity
     var scalar = ((new_quantity > old_quantity) ?  1 : -1);
-
-    // update the new product quantity in the map
-    items.set(item_name, [item_price, items.get(item_name)[1] + scalar]);
 
     // update the total price
     var current_total = document.getElementById('menu_total_price').innerHTML;
     var new_total = (parseFloat(current_total) + scalar * parseFloat(item_price)).toFixed(2);
     document.getElementById('menu_total_price').innerHTML = new_total;
+
+    // update the map with the products quantity, or delete entry if quantity == 0.
+    if (new_quantity !== 0) {
+        items.set(item_name, [item_price, new_quantity]);
+    }
+    else {
+        items.delete(item_name);
+    }
 }
+
+/*
+* compile_cart() changes the value of three hidden boxes in the html: one that contains all the names of the selected
+* products, one for the quantity, and one for the prices. These values are then sent via GET method to php which
+* displays a shopping cart.
+*/
+function compile_cart()
+{
+    if( typeof items == 'undefined' ) {
+        items = new Map();
+    }
+
+    // if entry[0] is in document.getElementById('prod_names').value then
+    //
+
+    for (const entry of items.entries()) {
+        document.getElementById('prod_names').value += entry[0] + ";";
+        document.getElementById('prod_prices').value += entry[1][0] + " ";
+        document.getElementById('prod_quants').value += entry[1][1] + " ";
+    }
+
+    // alert user
+    if (items.size > 0) {
+        alert("Items has been added to cart");
+    }
+
+    // clear menu
+    for (i = 1; i <= 10; ++i) {
+        document.getElementById('numinput' + i).value = 0;
+    }
+}
+

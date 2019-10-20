@@ -1,6 +1,7 @@
 <?php
-include "php/get_menu_info.php";
+    include "php/get_menu_info.php";
 ?>
+
 <head>
     <meta charset="UTF-8">
     <title>The Durian Experience - Menu</title>
@@ -12,17 +13,17 @@ include "php/get_menu_info.php";
         Welcome to a new world of Durian cuisine.
     </header>
     <div class="navbar">
-        <a href="index.html">
+        <a href="index.php">
             <div class="navbar_element" style="margin-right: 1%;">
                 Home
             </div>
         </a>
-        <a href="menu.html">
+        <a href="menu.php">
             <div class="active_element" style="margin-right: 1%;">
                 Menu
             </div>
         </a>
-        <a href="deals.html">
+        <a href="deals.php">
             <div class="navbar_element" style="margin-right: 1%;">
                 Deals of the Day
             </div>
@@ -40,7 +41,7 @@ include "php/get_menu_info.php";
         <p class="centeredparagraph">
             Place an order by choosing the amount and then clicking Add to cart.
         </p>
-        <form method="get">
+       <form action="catalogue.php" method="get">
             <table id="menutable">
 				<tr>
 					<th colspan="4" class="category_header"> <?php echo $category_name_1; ?> </th>
@@ -148,9 +149,13 @@ include "php/get_menu_info.php";
                 </tr>
             </table>
 
+            <input class="numberinput" type="text" id="prod_names" name="prod_names" value="">
+            <input class="numberinput" type="text" id="prod_quants" name="prod_quants" value="">
+            <input class="numberinput" type="text" id="prod_prices" name="prod_prices" value="">
+
             <div id="price_and_cart">
                 total price: S$<span id="menu_total_price">0.00</span> <br>
-                <input class="menusubmit" type="submit" value="Add to cart">
+                <input class="menusubmit" type="submit" value="Add to cart" onclick="compile_cart()">
             </div>
         </form>
     </div>

@@ -43,7 +43,7 @@
         <tbody>
             <?php
                 $total = 0;
-                for ($i=0; $i < count($_SESSION['cart']); $i++){
+                for ($i=0; $i < count($_SESSION['cart']); $i++) {
                     echo "<tr>";
                     echo "<td>" .$items[$_SESSION['cart'][$i]]. "</td>";
                     echo "<td align='right'>$";
