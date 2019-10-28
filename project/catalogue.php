@@ -1,13 +1,14 @@
 <?php
-    session_start();
-    if (!isset($_SESSION['cart'])) {
-        $_SESSION['cart'] = array();
+    include "php/setup_session.php";
+    if (isset($_GET['empty'])) {
+    	unset($_SESSION['cart']);
+    	header('location: ' . $_SERVER['PHP_SELF']);
+    	exit();
     }
-    if (isset($_GET['buy'])) {
-        $_SESSION['cart'][] = $_GET['buy'];
-        header('location: ' . $_SERVER['PHP_SELF']. '?' . SID);
-        exit();
+    if(isset($_GET['delete'])){
+        unset($_SESSION['cart']);
     }
+    include "php/db_connect.php";
 ?>
 
 <!DOCTYPE html>
@@ -16,26 +17,19 @@
     <title>Product catalog</title>
 </head>
 <body>
-    <?php
-        $items = explode(";", $_GET['prod_names']);
-        $prices = explode(" ", $_GET['prod_prices']);
-        $quantities = explode(" ", $_GET['prod_quants']);
 
-        // remove duplicate items
-        for ($i=0; $i<count($items)-1; $i++) {
-            for ($k=$i+1; $k<count($items)-1; $k++) {
-                if ($items[$i] == $items[$k]) {
-                   $quantities[$i] += $quantities[$k];
-
-                   \array_splice($items, $k, 1);
-                   \array_splice($prices, $k, 1);
-                   \array_splice($quantities, $k, 1);
-                }
-            }
-        }
-    ?>
-
-    <p>Your shopping cart contains <?php echo count($items) - 1; ?> items.</p>
+    <p>Your shopping cart contains <?php
+        $total = 0;
+        for($i = 0; $i < count($_SESSION['cart']); $i++){
+            $total += $_SESSION['cart'][$i];
+         }
+         if($total == 1){
+            echo $total . " item.";
+         }
+         else{
+            echo $total . " items.";
+         }
+    ?></p>
 
     <table border="1">
         <thead>
@@ -49,17 +43,23 @@
         <tbody>
             <?php
                 $total = 0;
-
-                for ($i=0; $i<count($items)-1; $i++) {
-                    echo "<tr>";
-                    echo "<td>" .$items[$i]. "</td>";
-                    echo "<td align='right'>" .$quantities[$i]. "</td>";
-                    echo "<td align='right'>$" .$prices[$i]. "</td>";
-                    echo "<td><a href='" .$_SERVER['PHP_SELF']. '?buy=' .$i. "'>Buy</a></td>";
-                    echo "</tr>";
-
-                    $total = $total + $prices[$i] * $quantities[$i];
+                $sql = "SELECT product_name, product_price FROM f32ee.de_products";
+                if(!$result = mysqli_query($conn, $sql)){
+                    echo "Something went wrong when fetching data from database: " . mysqli_error($conn);
                 }
+                for($i = 0; $i < count($_SESSION['cart']); $i++){
+                     $row = mysqli_fetch_assoc($result);
+                     if($_SESSION['cart'][$i] > 0){
+                        echo "<tr>";
+                        echo "<td>" .$row['product_name']. "</td>";
+                        echo "<td align='right'>" .$_SESSION['cart'][$i]. "</td>";
+                        echo "<td align='right'>$" .$row['product_price']. "</td>";
+                        echo "<td><a href='?delete=$i'>Delete</a></td>";
+                        echo "</tr>";
+
+                        $total = $total + (double)$row['product_price'] * (int)$_SESSION['cart'][$i];
+                     }
+                 }
                 echo "<tr>";
                 echo "<td colspan=2 align='left'><b>Total price </b></td>";
                 echo "<td align='right'>$" . number_format($total, 2) . "</td>";
@@ -67,8 +67,8 @@
             ?>
         </tbody>
     </table>
-
-    <p><a href="cart.php">Continue to checkout</a></p>
+    <p><a href="cart.php">Continue to checkout</a>
+    <a href="<?php echo $_SERVER['PHP_SELF']; ?>?empty=1">Empty your cart</a></p>
 
 </body>
 </html>

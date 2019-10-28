@@ -1,5 +1,6 @@
 <?php
     include "php/get_menu_info.php";
+	include "php/setup_session.php";
 ?>
 
 <head>
@@ -10,7 +11,17 @@
 </head>
 <body>
     <header>
-        Welcome to a new world of Durian cuisine.
+		<a href="catalogue.php">
+			<span id="shopping_cart" class="shopping_cart">
+			    <?php
+			        $total = 0;
+			        for($i = 0; $i < count($_SESSION['cart']); $i++){
+                        $total += $_SESSION['cart'][$i];
+			        }
+			        echo $total;
+                ?>
+			</span>
+		</a>
     </header>
     <div class="navbar">
         <a href="index.php">
@@ -41,7 +52,7 @@
         <p class="centeredparagraph">
             Place an order by choosing the amount and then clicking Add to cart.
         </p>
-       <form action="catalogue.php" method="get">
+       <form action="php/add_to_cart_menu.php" method="get">
             <table id="menutable">
 				<tr>
 					<th colspan="4" class="category_header"> <?php echo $category_name_1; ?> </th>
@@ -147,11 +158,27 @@
                         <input class="numberinput" type="number" id="numinput10" min="0" value=0 onchange="updatePrice('numinput10','<?php echo $product_name_10; ?>', <?php echo $product_price_10;?>)">
                     </td>
                 </tr>
+                <tr>
+                    <th> <?php echo $product_name_11; ?> </th>
+                    <td> <?php echo $product_description_11; ?> </td>
+                    <td> <?php echo "$";?><span id="product_10"><?php echo $product_price_11;?></span></td>
+                    <td>
+                        <input class="numberinput" type="number" id="numinput11" min="0" value=0 onchange="updatePrice('numinput11','<?php echo $product_name_11; ?>', <?php echo $product_price_11;?>)">
+                    </td>
+                </tr>
+                <tr>
+                    <th> <?php echo $product_name_12; ?> </th>
+                    <td> <?php echo $product_description_12; ?> </td>
+                    <td> <?php echo "$";?><span id="product_10"><?php echo $product_price_12;?></span></td>
+                    <td>
+                        <input class="numberinput" type="number" id="numinput12" min="0" value=0 onchange="updatePrice('numinput12','<?php echo $product_name_12; ?>', <?php echo $product_price_12;?>)">
+                    </td>
+                </tr>
             </table>
 
-            <input class="numberinput" type="text" id="prod_names" name="prod_names" value="">
-            <input class="numberinput" type="text" id="prod_quants" name="prod_quants" value="">
-            <input class="numberinput" type="text" id="prod_prices" name="prod_prices" value="">
+            <input class="numberinput" type="hidden" id="prod_names" name="prod_names" value="">
+            <input class="numberinput" type="hidden" id="prod_quants" name="prod_quants" value="">
+            <input class="numberinput" type="hidden" id="prod_prices" name="prod_prices" value="">
 
             <div id="price_and_cart">
                 total price: S$<span id="menu_total_price">0.00</span> <br>

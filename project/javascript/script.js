@@ -93,18 +93,16 @@ function compile_cart()
 
     // if entry[0] is in document.getElementById('prod_names').value then
     //
-
     for (const entry of items.entries()) {
         document.getElementById('prod_names').value += entry[0] + ";";
         document.getElementById('prod_prices').value += entry[1][0] + " ";
-        document.getElementById('prod_quants').value += entry[1][1] + " ";
+        document.getElementById('prod_quants').value += entry[1][1] + ";";
     }
 
     // alert user
     if (items.size > 0) {
-        alert("Items has been added to cart");
+        alert("Items have been added to cart");
     }
-
     // clear menu
     for (i = 1; i <= 10; ++i) {
         document.getElementById('numinput' + i).value = 0;

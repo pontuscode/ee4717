@@ -64,7 +64,7 @@ INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_
 INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_description, product_category) VALUES (NULL, "Hot mess", 1.95, "Warm durian drink", 3);
 INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_description, product_category) VALUES (NULL, "Chocolate Milkshake", 3.95, "Chocolate/Durian milkshake", 4);
 INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_description, product_category) VALUES (NULL, "Lemon Pudding", 4.95, "Lemon/Durian pudding",  4);
-
+INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_description, product_category) VALUES (NULL, "Durian Pancake", 5.95, "Served with Durian Jam",4);
 INSERT INTO f32ee.de_positions (position_id, position_name, position_salary) VALUES (1, "Cook", 1000);
 INSERT INTO f32ee.de_positions (position_id, position_name, position_salary) VALUES (2, "Manager", 1500);
 INSERT INTO f32ee.de_positions (position_id, position_name, position_salary) VALUES (3, "Delivery Driver", 750);

@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ed44780-121e-4260-9442-19298a0c6878" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/setupdb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/setupdb.sql" afterDir="false" />
-    </list>
+    <list default="true" id="4ed44780-121e-4260-9442-19298a0c6878" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +15,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Apache24/htdocs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
@@ -46,6 +42,8 @@
       <option name="presentableId" value="Default" />
       <updated>1571294753407</updated>
       <workItem from="1571294754760" duration="10340000" />
+      <workItem from="1572228835760" duration="1533000" />
+      <workItem from="1572230391897" duration="14303000" />
     </task>
     <servers />
   </component>

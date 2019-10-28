@@ -1,15 +1,18 @@
 /* ========================================== CSS FOR HTML ELEMENTS ====================================== */
 
 body {
-    background: url("media/pics/header_pic.jpg") center center fixed;
+    background: url("media/pics/background_pic.jpg") center center fixed;
     background-size:cover;
 }
 header {
-    font-size:60px;
-    font-weight: bold;
-    text-align: center;
     height:100px;
     width:100%;
+	background: url("media/pics/header_pic.png");
+	background-size: 500px 100px;
+	background-repeat: no-repeat;
+	background-position:center;
+	font-size:12px;
+	text-align:right;
 }
 footer {
     text-align:center;
@@ -45,6 +48,19 @@ td {
 }
 .centeredparagraph {
     text-align:center;
+}
+.shopping_cart {
+	float:right;
+	height:60px;
+	width:60px;
+	margin-right:15px;
+	background: url("media/pics/shopping_cart.png");
+	background-size:90%;
+	color:yellow;
+	margin-top:40px;
+	font-size:large;
+	font-weight:bold;
+	text-align:center;
 }
 
 /* ========================================== CSS FOR NAVBAR ====================================== */
@@ -233,4 +249,6 @@ td {
 
     baker_job_application: https://pixabay.com/illustrations/pizza-maker-pizza-chef-pizzeria-3181892/
     delivery_job_application: https://www.needpix.com/photo/643892/delivery-guy-boy-man-delivery-courier-pizza-pizza-delivery-scooter-quick-delivery
+	
+	shopping_cart: http://pngimg.com/uploads/shopping_cart/shopping_cart_PNG38.png
  */
