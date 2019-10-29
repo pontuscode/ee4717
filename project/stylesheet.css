@@ -1,7 +1,7 @@
 /* ========================================== CSS FOR HTML ELEMENTS ====================================== */
 
 body {
-    background: url("media/pics/background_pic.jpg") center center fixed;
+    background: url("media/pics/black.jpg") center center fixed;
     background-size:cover;
 }
 header {
@@ -88,29 +88,50 @@ td {
     color:#006600;
 }
 /* ========================================== CSS FOR HOMEPAGE ====================================== */
+.pic {
+    height:550px;
+    width:100%;
+}
 
 .pic_left {
-    height:550px;
-    width:70%;
+    width:40%;
+    height: 100%;
     float:left;
-    margin:0;
+    padding-left: 150px;
 }
+
 .pic_right {
-    height:550px;
-    width:70%;
+    width:40%;
+    height: 100%;
     float:right;
+    padding-right: 150px;
 }
+
+.para_right_box {
+    float: left;
+    width: 40%;
+    height: auto;
+    padding: 50px 0 0 50px;
+}
+
+.para_left_box {
+    float: right;
+    width: 40%;
+    height: auto;
+    padding: 50px 50px 0 0;
+}
+
 .para_right {
     color:#FFFFFF;
-    width:30%;
-    float:right;
+    width:85%;
+    float:left;
     background-color:rgba(0,0,0,0.6);
     margin:0;
 }
 .para_left {
     color:#FFFFFF;
-    width:30%;
-    float:left;
+    width:85%;
+    float:right;
     background-color:rgba(0,0,0,0.6);
     margin:0;
     clear:left;
@@ -121,7 +142,7 @@ td {
     margin:0;
     text-align:center;
     width:30%;
-    float:left;
+    float:right;
     clear:left;
 }
 .h2_homepage_right {
@@ -130,7 +151,7 @@ td {
     margin:0;
     text-align:center;
     width:30%;
-    float:right;
+    float:left;
 }
 
 /* ========================================== CSS FOR MENU ====================================== */
