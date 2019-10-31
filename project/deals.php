@@ -84,7 +84,9 @@ include "php/setup_session.php";
         </form>
     </div>
     <footer>
-        <p>Copyright &copy; The Durian Company 2019.</p>
+        <p>Copyright &copy; The Durian Company 2019. </p>
+        <p>Hiranandani Gardens, Mumbai, Maharashtra 400076, India </p>
+        <p><a href="mailto:durianMcD@durian.dur">durian_experience@email.com</a></p>
     </footer>
 </body>
 </html>

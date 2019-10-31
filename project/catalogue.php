@@ -107,7 +107,9 @@
     <p class="centeredparagraph"><a href="cart.php" class="cc_links">Continue to checkout</a>
     <a href="<?php echo $_SERVER['PHP_SELF']; ?>?empty=1" class="cc_links">Empty your cart</a></p>
     <footer>
-        <p style="font-size: small;font-style: italic;">Copyright &copy; The Durian Company 2019.</p>
+        <p>Copyright &copy; The Durian Company 2019. </p>
+        <p>Hiranandani Gardens, Mumbai, Maharashtra 400076, India </p>
+        <p><a href="mailto:durianMcD@durian.dur">durian_experience@email.com</a></p>
     </footer>
 </body>
 </html>
