@@ -99,10 +99,6 @@ function compile_cart()
         document.getElementById('prod_quants').value += entry[1][1] + ";";
     }
 
-    // alert user
-    if (items.size > 0) {
-        alert("Items have been added to cart");
-    }
     // clear menu
     for (i = 1; i <= 10; ++i) {
         document.getElementById('numinput' + i).value = 0;

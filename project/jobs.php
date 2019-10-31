@@ -39,7 +39,7 @@
                 Deals of the Day
             </div>
         </a>
-        <a href="jobs.html">
+        <a href="jobs.php">
             <div class="active_element">
                 Jobs
             </div>
@@ -58,7 +58,7 @@
                 Are you who we're looking for? Apply now!
             </div>
             <div class="jobapplication">
-                <form action="jobapplication.html">
+                <form action="jobapplication.php">
                     <input class="jobsubmit" type="submit" value="Apply now">
                 </form>
             </div>
@@ -72,7 +72,7 @@
                 Sound interesting? Apply now!
             </div>
             <div class="jobapplication">
-                <form action="jobapplication.html">
+                <form action="jobapplication.php">
                     <input class="jobsubmit" type="submit" value="Apply now">
                 </form>
             </div>

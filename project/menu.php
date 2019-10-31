@@ -39,7 +39,7 @@
                 Deals of the Day
             </div>
         </a>
-        <a href="jobs.html">
+        <a href="jobs.php">
             <div class="navbar_element">
                 Jobs
             </div>
@@ -161,7 +161,7 @@
                 <tr>
                     <th> <?php echo $product_name_11; ?> </th>
                     <td> <?php echo $product_description_11; ?> </td>
-                    <td> <?php echo "$";?><span id="product_10"><?php echo $product_price_11;?></span></td>
+                    <td> <?php echo "$";?><span id="product_11"><?php echo $product_price_11;?></span></td>
                     <td>
                         <input class="numberinput" type="number" id="numinput11" min="0" value=0 onchange="updatePrice('numinput11','<?php echo $product_name_11; ?>', <?php echo $product_price_11;?>)">
                     </td>
@@ -169,7 +169,7 @@
                 <tr>
                     <th> <?php echo $product_name_12; ?> </th>
                     <td> <?php echo $product_description_12; ?> </td>
-                    <td> <?php echo "$";?><span id="product_10"><?php echo $product_price_12;?></span></td>
+                    <td> <?php echo "$";?><span id="product_12"><?php echo $product_price_12;?></span></td>
                     <td>
                         <input class="numberinput" type="number" id="numinput12" min="0" value=0 onchange="updatePrice('numinput12','<?php echo $product_name_12; ?>', <?php echo $product_price_12;?>)">
                     </td>
@@ -187,8 +187,6 @@
         </form>
     </div>
     <footer>
-        <p>Copyright &copy; The Durian Company 2019. </p>
-        <p>Hiranandani Gardens, Mumbai, Maharashtra 400076, India </p>
-        <p><a href="mailto:durianMcD@durian.dur">durian_experience@email.com</a></p>
+        Copyright &copy; The Durian Company 2019.
     </footer>
 </body>

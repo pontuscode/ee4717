@@ -1,6 +1,5 @@
 <?php
     include "db_connect.php";
-
     include "setup_session.php";
     if(isset($_GET['pizza_homepage'])){
         $_SESSION['cart'][0]++;

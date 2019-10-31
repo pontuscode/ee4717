@@ -1,3 +1,7 @@
+<?php
+	include "php/setup_session.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +12,17 @@
 <body>
 <div>
     <header>
+		<a href="catalogue.php">
+			<span id="shopping_cart" class="shopping_cart">
+			    <?php
+			        $total = 0;
+			        for($i = 0; $i < count($_SESSION['cart']); $i++){
+                        $total += $_SESSION['cart'][$i];
+			        }
+			        echo $total;
+                ?>
+			</span>
+		</a>
     </header>
     <div class="navbar">
         <a href="index.php">
@@ -20,12 +35,12 @@
                 Menu
             </div>
         </a>
-        <a href="deals.html">
+        <a href="deals.php">
             <div class="navbar_element" style="margin-right: 1%;">
                 Today's deals
             </div>
         </a>
-        <a href="jobs.html">
+        <a href="jobs.php">
             <div class="navbar_element">
                 Jobs
             </div>
