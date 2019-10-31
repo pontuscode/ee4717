@@ -10,17 +10,21 @@ include "php/setup_session.php";
 </head>
 <body>
     <header>
-		<a href="catalogue.php">
-			<span id="shopping_cart" class="shopping_cart">
-			    <?php
-			        $total = 0;
-			        for($i = 0; $i < count($_SESSION['cart']); $i++){
-                        $total += $_SESSION['cart'][$i];
-			        }
-			        echo $total;
-                ?>
-			</span>
-		</a>
+        <div class="shopping_cart">
+            <a href="catalogue.php">
+                <span id="shopping_cart">
+                    <div class="cart_image">
+                        <?php
+                            $total = 0;
+                            for($i = 0; $i < count($_SESSION['cart']); $i++){
+                                $total += $_SESSION['cart'][$i];
+                            }
+                            echo $total;
+                        ?>
+                    </div>
+                </span>
+            </a>
+        </div>
     </header>
     <div class="navbar">
         <a href="index.php">
@@ -61,7 +65,7 @@ include "php/setup_session.php";
                 </form>
             </div>
         </div>
-        <div class="pic">
+        <div class="pic" id="drink_homepage">
             <img src="media/pics/smoothie.jpg" class="pic_right">
             <div class="para_left_box">
                 <h2 class="h2_homepage_left">Durian Drink</h2><br><br>
@@ -75,7 +79,7 @@ include "php/setup_session.php";
                 </form>
             </div>
         </div>
-        <div class="pic">
+        <div class="pic" id="dessert_homepage">
             <img src="media/pics/durian_dessert1.jpg" class="pic_left">
             <div class="para_right_box">
                 <h2 class="h2_homepage_right">Durian Dessert</h2><br><br>
@@ -84,7 +88,7 @@ include "php/setup_session.php";
                 Order yours now for just $5.95.
                 </p><br><br><br><br><br>
                 <form method="get" action="php/add_to_cart_hp_dotd.php">
-                    <label><input type=submit value="Add to cart" name="dessert_homepage"></label>
+                    <label><input type="submit" value="Add to cart" name="dessert_homepage"></label>
                 </form>
             </div>
         </div>

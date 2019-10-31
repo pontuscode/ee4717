@@ -6,26 +6,32 @@
         header('location: ' . $_SERVER['PHP_SELF']);
         exit();
     }
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Product catalog</title>
 	<link rel="stylesheet" href="stylesheet.css">
+	<script src="javascript/script.js"></script>
 </head>
 <body>
 <header>
-	<a href="catalogue.php">
-		<span id="shopping_cart" class="shopping_cart">
-			<?php
-				$total = 0;
-				for($i = 0; $i < count($_SESSION['cart']); $i++){
-					$total += $_SESSION['cart'][$i];
-				}
-				echo $total;
-			?>
-		</span>
-	</a>
+    <div class="shopping_cart">
+        <a href="catalogue.php">
+            <span id="shopping_cart">
+                <div class="cart_image">
+                    <?php
+                        $total = 0;
+                        for($i = 0; $i < count($_SESSION['cart']); $i++){
+                            $total += $_SESSION['cart'][$i];
+                        }
+                        echo $total;
+                    ?>
+                </div>
+            </span>
+        </a>
+    </div>
 </header>
  <div class="navbar">
         <a href="index.php">
@@ -40,7 +46,7 @@
         </a>
         <a href="deals.php">
             <div class="navbar_element" style="margin-right: 1%;">
-                Today's deals
+                Deals of the day
             </div>
         </a>
         <a href="jobs.php">
@@ -62,7 +68,7 @@
          }
     ?></p>
 
-    <table class="centeredtable" border="1">
+    <table class="cc_table" border="1">
         <thead>
             <tr>
                 <th>Item</th>
@@ -107,14 +113,33 @@
                 Please fill in the fields below. All fields with an asterisk* are required.<br>
                 You will get a confirmation e-mail once we receive the order!
             </p>
-            <form method="post" class="formjobapplication">
-                <label for="firstname" class="label_jobapplication">First name*</label><input class="input_jobapplication" id="firstname" type="text" placeholder="First name" required><br>
-                <label for="lastname" class="label_jobapplication">Last name*</label><input class="input_jobapplication" id="lastname" type="text" placeholder="Last name" required><br>
-                <label for="email" class="label_jobapplication">E-mail*</label><input class="input_jobapplication" id="email" type="email" placeholder="E-mail address" required><br>
-                <label for="experience" class="label_jobapplication">Experience</label><textarea class="input_jobapplication" id="experience" rows="4" cols="40" placeholder="Experience"></textarea><br>
+            <form method="post" action="php/confirm_order.php">
+                <label for="firstname" class="label_jobapplication">First name*</label><input class="input_jobapplication" name="firstname" id="firstname" type="text" placeholder="First name" required onchange="validateName()"><br>
+                <label for="lastname" class="label_jobapplication">Last name*</label><input class="input_jobapplication" name="lastname" id="lastname" type="text" placeholder="Last name" required onchange="validateName()"><br>
+                <label for="email" class="label_jobapplication">E-mail*</label><input class="input_jobapplication" name="email" id="email" type="email" placeholder="E-mail address" required onchange="validateEmail()"><br>
+                <label for="streetaddress" class="label_jobapplication">Street address*</label><input class="input_jobapplication" name="streetaddress" id="streetaddress" type="text" placeholder="Street address" required><br>
+                <label for="zipcode" class="label_jobapplication">Zip code*</label><input class="input_jobapplication" name="zipcode" id="zipcode" type="text" placeholder="Zip code" required><br>
+                <label for="additional_info" class="label_jobapplication">Additional info</label><textarea class="input_jobapplication" id="additional_info" rows="4" cols="40" placeholder="Additional info to driver"></textarea><br>
+                <label for="payment" class="label_jobapplication">Payment*</label>
+                <select class="input_jobapplication" name='payment_method' required onchange="creditcard_info()">
+                    <option selected disabled>Choose here</option>
+                    <option value="cash">Cash</option>
+                    <option id="creditcard" value='creditcard'>Credit card</option>
+                    <option value="invoice">Invoice</option>
+                </select><br>
+                <label for="creditcard_number" class="label_jobapplication" id="creditcard_number_label"></label>
+                    <input class="input_jobapplication" name="creditcard_number" id="creditcard_number" placeholder="Creditcard number" type="hidden"><br>
+                <label for="cvc_number" class="label_jobapplication" id="cvc_number_label"></label>
+                    <input class="input_jobapplication" id="cvc_number" placeholder="CVC" type="hidden"><br>
+                <br><br>
                 <input class="submit_jobapplication" type="submit" value="Confirm order">
             </form>
         </div>
     </div>
+    <footer>
+        <p>Copyright &copy; The Durian Company 2019. </p>
+        <p>Hiranandani Gardens, Mumbai, Maharashtra 400076, India </p>
+        <p><a href="mailto:durianMcD@durian.dur">durian_experience@email.com</a></p>
+    </footer>
 </body>
 </html>

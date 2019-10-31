@@ -12,17 +12,21 @@
 <body>
 <div>
     <header>
-		<a href="catalogue.php">
-			<span id="shopping_cart" class="shopping_cart">
-			    <?php
-			        $total = 0;
-			        for($i = 0; $i < count($_SESSION['cart']); $i++){
-                        $total += $_SESSION['cart'][$i];
-			        }
-			        echo $total;
-                ?>
-			</span>
-		</a>
+        <div class="shopping_cart">
+            <a href="catalogue.php">
+                <span id="shopping_cart">
+                    <div class="cart_image">
+                        <?php
+                            $total = 0;
+                            for($i = 0; $i < count($_SESSION['cart']); $i++){
+                                $total += $_SESSION['cart'][$i];
+                            }
+                            echo $total;
+                        ?>
+                    </div>
+                </span>
+            </a>
+        </div>
     </header>
     <div class="navbar">
         <a href="index.php">
@@ -37,7 +41,7 @@
         </a>
         <a href="deals.php">
             <div class="navbar_element" style="margin-right: 1%;">
-                Today's deals
+                Deals of the day
             </div>
         </a>
         <a href="jobs.php">
@@ -55,7 +59,7 @@
                 Please fill in the fields below. All fields with an asterisk* are required.  We will reply as soon as possible!<br>
                 You will get a confirmation e-mail once we receive the application!
             </p>
-            <form method="post" class="formjobapplication">
+            <form method="post">
                 <label for="firstname" class="label_jobapplication">First name*</label><input class="input_jobapplication" id="firstname" type="text" placeholder="First name" required><br>
                 <label for="lastname" class="label_jobapplication">Last name*</label><input class="input_jobapplication" id="lastname" type="text" placeholder="Last name" required><br>
                 <label for="email" class="label_jobapplication">E-mail*</label><input class="input_jobapplication" id="email" type="email" placeholder="E-mail address" required><br>

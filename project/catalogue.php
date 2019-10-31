@@ -6,11 +6,12 @@
     	header('location: ' . $_SERVER['PHP_SELF']);
     	exit();
     }
-    if(isset($_GET['delete'])){
-		$key = $_GET['delete'];
-		$_SESSION['cart'][$key] = 0;
+    if(isset($_GET['plus'])){
+		$_SESSION['cart'][$_GET['plus']]++;
     }
-
+    if(isset($_GET['minus'])){
+     		$_SESSION['cart'][$_GET['minus']]--;
+     }
 ?>
 
 <!DOCTYPE html>
@@ -21,17 +22,21 @@
 </head>
 <body>
     <header>
-		<a href="catalogue.php">
-			<span id="shopping_cart" class="shopping_cart">
-			    <?php
-			        $total = 0;
-			        for($i = 0; $i < count($_SESSION['cart']); $i++){
-                        $total += $_SESSION['cart'][$i];
-			        }
-			        echo $total;
-                ?>
-			</span>
-		</a>
+        <div class="shopping_cart">
+            <a href="catalogue.php">
+                <span id="shopping_cart">
+                    <div class="cart_image">
+                        <?php
+                            $total = 0;
+                            for($i = 0; $i < count($_SESSION['cart']); $i++){
+                                $total += $_SESSION['cart'][$i];
+                            }
+                            echo $total;
+                        ?>
+                    </div>
+                </span>
+            </a>
+        </div>
     </header>
     <div class="navbar">
         <a href="index.php">
@@ -46,7 +51,7 @@
         </a>
         <a href="deals.php">
             <div class="navbar_element" style="margin-right: 1%;">
-                Today's deals
+                Deals of the day
             </div>
         </a>
         <a href="jobs.php">
@@ -69,7 +74,7 @@
          }
     ?></p>
 
-    <table class="centeredtable" border="1">
+    <table class="cc_table" border="0">
         <thead>
             <tr>
                 <th>Item</th>
@@ -85,14 +90,17 @@
                 if(!$result = mysqli_query($conn, $sql)){
                     echo "Something went wrong when fetching data from database: " . mysqli_error($conn);
                 }
+                $minus = "media/pics/minus_symbol.png";
+                $plus = "media/pics/plus_symbol.png";
                 for($i = 0; $i < count($_SESSION['cart']); $i++){
                      $row = mysqli_fetch_assoc($result);
                      if($_SESSION['cart'][$i] > 0){
                         echo "<tr>";
                         echo "<td>" .$row['product_name']. "</td>";
-                        echo "<td align='right'>" .$_SESSION['cart'][$i]. "</td>";
+                        echo '<td align="center"><a href="'. "?minus=" .$i. '"><img src="media/pics/minus_symbol.png" class="cc_minus"></a>';
+                        echo $_SESSION["cart"][$i];
+                        echo '<a href="'. "?plus=" .$i. '"><img src="media/pics/plus_symbol.png" class="cc_plus"></a>';
                         echo "<td align='right'>$" .$row['product_price']. "</td>";
-                        echo "<td><a href='". '?delete=' .$i. "' class='cc_links'>Delete</a></td>";
                         echo "</tr>";
                         $total = $total + (double)$row['product_price'] * (int)$_SESSION['cart'][$i];
                      }

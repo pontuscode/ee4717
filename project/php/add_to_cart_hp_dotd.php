@@ -8,12 +8,12 @@
     }
     elseif(isset($_GET['drink_homepage'])){
         $_SESSION['cart'][6]++;
-        header("location:../index.php");
+        header("location:../index.php#drink_homepage");
         return;
     }
     elseif(isset($_GET['dessert_homepage'])){
         $_SESSION['cart'][11]++;
-        header("location:../index.php");
+        header("location:../index.php#dessert_homepage");
         return;
     }
 

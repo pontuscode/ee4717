@@ -1,7 +1,7 @@
 /* ========================================== CSS FOR HTML ELEMENTS ====================================== */
 
 body {
-    background: url("media/pics/background_pic.jpg") center center fixed;
+    background: url("media/pics/black.jpg") center center fixed;
     background-size:cover;
 }
 header {
@@ -27,7 +27,7 @@ th {
     width:141px;
 }
 td {
-    border:double;
+    border:1px solid black;
 }
 
 /* ========================================== CSS FOR ALL PAGES ====================================== */
@@ -49,24 +49,26 @@ td {
 .centeredparagraph {
     text-align:center;
 }
-.centeredtable {
-	margin-left:auto;
-	margin-right:auto;
-}
 .shopping_cart {
 	float:right;
 	height:60px;
 	width:60px;
 	margin-right:15px;
-	background: url("media/pics/shopping_cart.png");
-	background-size:90%;
 	color:yellow;
 	margin-top:40px;
-	font-size:large;
-	font-weight:bold;
-	text-align:center;
+    position:fixed;
+    margin-left:94%;
 }
-
+.cart_image {
+    height:100%;
+    width:100%;
+    background-image: url("media/pics/shopping_cart.png");
+    background-size:100%,100%;
+    color:yellow;
+    font-size:large;
+    font-weight:bold;
+    text-align:center;
+}
 /* ========================================== CSS FOR NAVBAR ====================================== */
 
 .navbar {
@@ -252,11 +254,12 @@ td {
     text-align: right;
     padding-right:30px;
     margin-top: 10px;
-    width:100px;
+    width:150px;
     float:left;
 }
 .submit_jobapplication {
-    margin:10px;
+    margin-left:50px;
+    margin-bottom:15px;
 }
 .application_wrapper {
     margin-left:25%;
@@ -269,7 +272,25 @@ td {
 .cc_links {
     color:#FFFF00;
 }
-
+.cc_plus {
+    float:right;
+    height:15px;
+    width:15px;
+    background:url("media/pics/plus_symbol.png");
+}
+.cc_minus{
+    float:left;
+    height:15px;
+    width:15px;
+    background:url("media/pics/minus_symbol.png");
+}
+.cc_table {
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #006600;
+    color: #FFFF00;
+    border-color:black;
+}
 /* Image sources:
     background_picture : https://i0.wp.com/www.healthfitnessrevolution.com/wp-content/uploads/2017/02/iStock-609794900.jpg?fit=1254%2C836
     durian_pizza1.jpg : https://coconuts.co/wp-content/uploads/2018/11/45154492_410295856170787_729699099456045056_n-960x540.jpg

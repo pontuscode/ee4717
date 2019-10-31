@@ -11,17 +11,21 @@
 </head>
 <body>
     <header>
-		<a href="catalogue.php">
-			<span id="shopping_cart" class="shopping_cart">
-			    <?php
-			        $total = 0;
-			        for($i = 0; $i < count($_SESSION['cart']); $i++){
-                        $total += $_SESSION['cart'][$i];
-			        }
-			        echo $total;
-                ?>
-			</span>
-		</a>
+        <div class="shopping_cart">
+            <a href="catalogue.php">
+                <span id="shopping_cart">
+                    <div class="cart_image">
+                        <?php
+                            $total = 0;
+                            for($i = 0; $i < count($_SESSION['cart']); $i++){
+                                $total += $_SESSION['cart'][$i];
+                            }
+                            echo $total;
+                        ?>
+                    </div>
+                </span>
+            </a>
+        </div>
     </header>
     <div class="navbar">
         <a href="index.php">
