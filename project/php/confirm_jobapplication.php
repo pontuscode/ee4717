@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Order success</title>
+    <title>Application success</title>
 	<link rel="stylesheet" href="../stylesheet.css">
 	<script src="../javascript/script.js"></script>
 </head>
@@ -56,6 +56,7 @@
     $firstName = $_POST['firstname'];
     $lastName = $_POST['lastname'];
     $position = $_POST['position'];
+    $experience = "n/a";
     if(strlen(trim($_POST['experience'])) > 0){
         $experience = $_POST['experience'];
     }
@@ -75,7 +76,7 @@
         $rand = rand();
     } while($rand === 0);
     $message .= "<br>You application id is: " . $rand . "<br>Please save your id!<br>";
-    $sql = "INSERT INTO f32ee.de_applicants (application_id, applied_for, first_name, last_name, email) VALUES ($rand, '$position', '$firstName', '$lastName', '$to')";
+    $sql = "INSERT INTO f32ee.de_applicants (application_id, applied_for, first_name, last_name, email, experience) VALUES ($rand, '$position', '$firstName', '$lastName', '$to', '$experience')";
     if(!$result = mysqli_query($conn, $sql)){
         echo "Something went wrong when inserting data to database: " . mysqli_error($conn);
     }
