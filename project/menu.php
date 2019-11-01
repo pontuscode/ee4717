@@ -18,7 +18,9 @@
                         <?php
                             $total = 0;
                             for($i = 0; $i < count($_SESSION['cart']); $i++){
-                                $total += $_SESSION['cart'][$i];
+                                if($_SESSION['cart'][$i] > 0){
+                                     $total += $_SESSION['cart'][$i];
+                                 }
                             }
                             echo $total;
                         ?>
@@ -50,10 +52,10 @@
         </a>
     </div>
     <div class="wrapper">
-        <h2 class="centeredheader">
+        <h2 class="centeredheader" style="color:#FFFF00">
             Menu
         </h2>
-        <p class="centeredparagraph">
+        <p class="centeredparagraph" style="color:#FFFF00">
             Place an order by choosing the amount and then clicking Add to cart.
         </p>
        <form action="php/add_to_cart_menu.php" method="get">
@@ -69,7 +71,7 @@
                     <td> <?php echo $product_description_1; ?> </td>
                     <td> <?php echo "$";?><span id="product_1"><?php echo $product_price_1;?></span></td>
                     <td>
-                        <input class="numberinput" type="number" id="numinput1" min="0" value=0 onchange="updatePrice('numinput1','<?php echo $product_name_1; ?>', <?php echo $product_price_1;?>)">
+                        <input class="numberinput" type="number" id="numinput1" min="0" value="0" onchange="updatePrice('numinput1','<?php echo $product_name_1; ?>', <?php echo $product_price_1;?>)">
                     </td>
                 </tr>
                 <tr>
@@ -185,7 +187,7 @@
             <input class="numberinput" type="hidden" id="prod_prices" name="prod_prices" value="">
 
             <div id="price_and_cart">
-                total price: S$<span id="menu_total_price">0.00</span> <br>
+                <span style="color:#FFFF00">Total price: S$</span><span id="menu_total_price" style="color:#FFFF00">0.00</span> <br>
                 <input class="menusubmit" type="submit" value="Add to cart" onclick="compile_cart()">
             </div>
         </form>

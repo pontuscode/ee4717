@@ -24,7 +24,9 @@ include "php/setup_session.php";
                         <?php
                             $total = 0;
                             for($i = 0; $i < count($_SESSION['cart']); $i++){
-                                $total += $_SESSION['cart'][$i];
+                                if($_SESSION['cart'][$i] > 0){
+                                     $total += $_SESSION['cart'][$i];
+                                 }
                             }
                             echo $total;
                         ?>

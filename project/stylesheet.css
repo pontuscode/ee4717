@@ -3,6 +3,7 @@
 body {
     background: url("media/pics/black.jpg") center center fixed;
     background-size:cover;
+    width:100%;
 }
 header {
     height:100px;
@@ -164,8 +165,9 @@ td {
 /* ========================================== CSS FOR MENU ====================================== */
 
 .menusubmit {
-    margin-top:20px;
-    float: right;
+    margin-top:10px;
+    float:right;
+    margin-right:50px;
 }
 #menutable {
 	width:50%;
@@ -177,8 +179,10 @@ td {
 
 #price_and_cart {
     width: 174px;
-    padding: 20px 34px 0 0;
+    height:60px;
+    padding: 0 0 0 0;
     float: right;
+    margin-right:325px;
 }
 
 .category_header {

@@ -18,7 +18,9 @@
                         <?php
                             $total = 0;
                             for($i = 0; $i < count($_SESSION['cart']); $i++){
-                                $total += $_SESSION['cart'][$i];
+                                if($_SESSION['cart'][$i] > 0){
+                                     $total += $_SESSION['cart'][$i];
+                                 }
                             }
                             echo $total;
                         ?>
@@ -62,8 +64,8 @@
                 Are you who we are looking for? Apply now!
             </div>
             <div class="jobapplication">
-                <form action="jobapplication.php">
-                    <input class="jobsubmit" type="submit" value="Apply now">
+                <form method="POST" action="jobapplication.php">
+                    <input class="jobsubmit" type="submit" name="cook" value="Apply now">
                 </form>
             </div>
         </div>
@@ -76,8 +78,8 @@
                 Sound interesting? Apply now!
             </div>
             <div class="jobapplication">
-                <form action="jobapplication.php">
-                    <input class="jobsubmit" type="submit" value="Apply now">
+                <form method="POST" action="jobapplication.php">
+                    <input class="jobsubmit" type="submit" name="driver" value="Apply now">
                 </form>
             </div>
         </div>

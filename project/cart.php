@@ -24,7 +24,9 @@
                     <?php
                         $total = 0;
                         for($i = 0; $i < count($_SESSION['cart']); $i++){
-                            $total += $_SESSION['cart'][$i];
+                            if($_SESSION['cart'][$i] > 0){
+                                 $total += $_SESSION['cart'][$i];
+                             }
                         }
                         echo $total;
                     ?>
@@ -55,16 +57,19 @@
             </div>
         </a>
     </div>
-    <p class="centeredparagraph">Your shopping cart contains <?php
+    <p class="centeredparagraph"><?php
         $total = 0;
         for($i = 0; $i < count($_SESSION['cart']); $i++){
             $total += $_SESSION['cart'][$i];
          }
          if($total == 1){
-            echo $total . " item.";
-         }
-         else{
-            echo $total . " items.";
+            echo "Your shopping cart contains " . $total . " item.";
+         } elseif($total > 1){
+            echo "Your shopping cart contains " . $total . " items.";
+         } else {
+            echo '<span style="color:#FFFF00;font-size:30px;">Your shopping cart is empty.</span>';
+            displayEmpty();
+            return;
          }
     ?></p>
 
@@ -143,3 +148,14 @@
     </footer>
 </body>
 </html>
+
+<?php
+    function displayEmpty(){
+        echo '<p class="centeredparagraph"><a href="index.php" class="cc_links">Continue shopping</a>';
+        echo '<footer>
+            <p>Copyright &copy; The Durian Company 2019. </p>
+            <p>Hiranandani Gardens, Mumbai, Maharashtra 400076, India </p>
+            <p><a href="mailto:durianMcD@durian.dur">durian_experience@email.com</a></p>
+        </footer>';
+    }
+?>
