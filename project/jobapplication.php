@@ -10,47 +10,49 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-<div>
-    <header>
-        <div class="shopping_cart">
-            <a href="catalogue.php">
-                <span id="shopping_cart">
-                    <div class="cart_image">
-                        <?php
-                            $total = 0;
-                            for($i = 0; $i < count($_SESSION['cart']); $i++){
-                                if($_SESSION['cart'][$i] > 0){
-                                     $total += $_SESSION['cart'][$i];
-                                 }
-                            }
-                            echo $total;
-                        ?>
-                    </div>
-                </span>
+    <div class="header_div">
+        <a href="index.php">
+            <img src="media/pics/header_pic.png" class="header_pic">
+        </a>
+            <div class="shopping_cart">
+                <a href="catalogue.php">
+                    <span id="shopping_cart">
+                        <div class="cart_image">
+                            <?php
+                                $total = 0;
+                                for($i = 0; $i < count($_SESSION['cart']); $i++){
+                                    if($_SESSION['cart'][$i] > 0){
+                                         $total += $_SESSION['cart'][$i];
+                                     }
+                                }
+                                echo $total;
+                            ?>
+                        </div>
+                    </span>
+                </a>
+            </div>
+        <div class="navbar">
+            <a href="jobs.php">
+                <div class="navbar_element">
+                    Jobs
+                </div>
+            </a>
+            <a href="deals.php">
+                <div class="navbar_element">
+                    Deals of the Day
+                </div>
+            </a>
+            <a href="menu.php">
+                <div class="navbar_element">
+                    Menu
+                </div>
+            </a>
+            <a href="index.php">
+                <div class="navbar_element">
+                    Home
+                </div>
             </a>
         </div>
-    </header>
-    <div class="navbar">
-        <a href="index.php">
-            <div class="navbar_element" style="margin-right: 1%;">
-                Home
-            </div>
-        </a>
-        <a href="menu.php">
-            <div class="navbar_element" style="margin-right: 1%;">
-                Menu
-            </div>
-        </a>
-        <a href="deals.php">
-            <div class="navbar_element" style="margin-right: 1%;">
-                Deals of the day
-            </div>
-        </a>
-        <a href="jobs.php">
-            <div class="navbar_element">
-                Jobs
-            </div>
-        </a>
     </div>
     <div class="wrapper">
         <div class="application_wrapper">
@@ -90,6 +92,5 @@
         <p>Hiranandani Gardens, Mumbai, Maharashtra 400076, India </p>
         <p><a href="mailto:durianMcD@durian.dur">durian_experience@email.com</a></p>
     </footer>
-</div>
 </body>
 </html>

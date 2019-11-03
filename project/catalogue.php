@@ -21,7 +21,10 @@
 	<link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <header>
+<div class="header_div">
+    <a href="index.php">
+        <img src="media/pics/header_pic.png" class="header_pic">
+    </a>
         <div class="shopping_cart">
             <a href="catalogue.php">
                 <span id="shopping_cart">
@@ -39,44 +42,46 @@
                 </span>
             </a>
         </div>
-    </header>
     <div class="navbar">
-        <a href="index.php">
-            <div class="navbar_element" style="margin-right: 1%;">
-                Home
-            </div>
-        </a>
-        <a href="menu.php">
-            <div class="navbar_element" style="margin-right: 1%;">
-                Menu
-            </div>
-        </a>
-        <a href="deals.php">
-            <div class="navbar_element" style="margin-right: 1%;">
-                Deals of the day
-            </div>
-        </a>
         <a href="jobs.php">
             <div class="navbar_element">
                 Jobs
             </div>
         </a>
+        <a href="deals.php">
+            <div class="navbar_element">
+                Deals of the Day
+            </div>
+        </a>
+        <a href="menu.php">
+            <div class="navbar_element">
+                Menu
+            </div>
+        </a>
+        <a href="index.php">
+            <div class="navbar_element">
+                Home
+            </div>
+        </a>
     </div>
-
+</div>
+<div class="wrapper">
     <p class="centeredparagraph"><?php
         $total = 0;
-        for($i = 0; $i < count($_SESSION['cart']); $i++){
-            $total += $_SESSION['cart'][$i];
-         }
-         if($total == 1){
-            echo $total . " item.";
-         } elseif($total > 1){
-            echo $total . " items.";
-         } else {
-            echo '<span style="color:#FFFF00;font-size:30px;">Your shopping cart is empty.</span>';
-            displayEmpty();
-            return;
-         }
+        echo '<span class="cc_cart_items">';
+            for($i = 0; $i < count($_SESSION['cart']); $i++){
+                $total += $_SESSION['cart'][$i];
+             }
+             if($total == 1){
+                echo 'Your shopping cart contains ' . $total . " item.";
+             } elseif($total > 1){
+                echo 'Your shopping cart contains ' . $total . " items.";
+             } else {
+                echo 'Your shopping cart is empty.';
+                displayEmpty();
+                return;
+             }
+         echo '</span>';
     ?></p>
 
     <table class="cc_table" border="0">
@@ -115,8 +120,9 @@
             ?>
         </tbody>
     </table>
-    <p class="centeredparagraph"><a href="cart.php" class="cc_links">Continue to checkout</a>
+    <p class="centeredparagraph"><a href="cart.php" class="cc_links" style="margin-right:13%;">Continue to checkout</a>
     <a href="<?php echo $_SERVER['PHP_SELF']; ?>?empty=1" class="cc_links">Empty your cart</a></p>
+</div>
     <footer>
         <p>Copyright &copy; The Durian Company 2019. </p>
         <p>Hiranandani Gardens, Mumbai, Maharashtra 400076, India </p>
@@ -124,7 +130,6 @@
     </footer>
 </body>
 </html>
-
 <?php
     function displayEmpty(){
         echo '<p class="centeredparagraph"><a href="index.php" class="cc_links">Continue shopping</a>';

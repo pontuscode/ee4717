@@ -16,7 +16,10 @@ include "php/setup_session.php";
     </style>
 </head>
 <body>
-    <header>
+<div class="header_div">
+    <a href="index.php">
+        <img src="media/pics/header_pic.png" class="header_pic">
+    </a>
         <div class="shopping_cart">
             <a href="catalogue.php">
                 <span id="shopping_cart">
@@ -34,29 +37,29 @@ include "php/setup_session.php";
                 </span>
             </a>
         </div>
-    </header>
     <div class="navbar">
-        <a href="index.php">
-            <div class="navbar_element" style="margin-right: 1%;">
-                Home
-            </div>
-        </a>
-        <a href="menu.php">
-            <div class="navbar_element" style="margin-right: 1%;">
-                Menu
-            </div>
-        </a>
-        <a href="deals.php">
-            <div class="active_element" style="margin-right: 1%;">
-                Deals of the Day
-            </div>
-        </a>
         <a href="jobs.php">
             <div class="navbar_element">
                 Jobs
             </div>
         </a>
+        <a href="deals.php">
+            <div class="active_element">
+                Deals of the Day
+            </div>
+        </a>
+        <a href="menu.php">
+            <div class="navbar_element">
+                Menu
+            </div>
+        </a>
+        <a href="index.php">
+            <div class="navbar_element">
+                Home
+            </div>
+        </a>
     </div>
+</div>
     <div class="wrapper">
         <h2 class="centeredheader">
             Deals of the day

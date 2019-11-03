@@ -4,6 +4,7 @@ body {
     background: url("media/pics/black.jpg") center center fixed;
     background-size:cover;
     width:100%;
+    margin:0 0 0 0;
 }
 header {
     height:100px;
@@ -32,11 +33,22 @@ td {
 }
 
 /* ========================================== CSS FOR ALL PAGES ====================================== */
-
+.header_div {
+    height:100px;
+    width:100%;
+    background-color:black;
+    position:fixed;
+}
+.header_pic {
+    float:left;
+    height:100px;
+    width:500px;
+}
 .wrapper {
     height:auto;
     width:99%;
     display:inline-block;
+    margin-top:110px;
 }
 .numberinput {
     width:40px;
@@ -56,7 +68,7 @@ td {
 	width:60px;
 	margin-right:15px;
 	color:yellow;
-	margin-top:40px;
+	margin-top:25px;
     position:fixed;
     margin-left:94%;
 }
@@ -73,32 +85,60 @@ td {
 /* ========================================== CSS FOR NAVBAR ====================================== */
 
 .navbar {
-    width:100%;
-    height:20px;
+    width:700px;
+    height:30%;
+    float:right;
+    margin-right:150px;
+    margin-top:40px;
 }
 .navbar_element {
     font-weight: bold;
-    float:left;
-    width:24%;
+    float:right;
+    width:auto;
     text-align: center;
-    background-color:#006600;
     display:block;
-    color:#ffff00;
+    color:#FFFF00;
+    margin: 0 5% 0 5%;
+    font-size:22px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+}
+.navbar_element:hover {
+    font-weight: bold;
+    float:right;
+    width:auto;
+    display:block;
+    color:white;
+    margin: 0 5% 0 5%;
+    font-size:22px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
 }
 .active_element {
     font-weight: bold;
-    float:left;
-    width:24%;
+    float: right;
+    width: auto;
+    display: block;
+    margin: 0 5% 0 5%;
+    color: #006600;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 22px;
+}
+.active_element:hover {
+    font-weight: bold;
+    float:right;
+    width:auto;
     text-align: center;
-    background-color:#ffff00;
     display:block;
-    color:#006600;
+    margin: 0 5% 0 5%;
+    color:white;
+    font-size:22px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
 }
 /* ========================================== CSS FOR HOMEPAGE ====================================== */
 
 .pic {
-    height:550px;
+    height:auto;
     width:100%;
+    display:inline;
 }
 
 .pic_left {
@@ -276,6 +316,9 @@ td {
 .cc_links {
     color:#FFFF00;
 }
+.cc_links:hover {
+    color:white;
+}
 .cc_plus {
     float:right;
     height:15px;
@@ -294,6 +337,10 @@ td {
     background-color: #006600;
     color: #FFFF00;
     border-color:black;
+}
+.cc_cart_items {
+    font-size:30px;
+    color:#FFFF00;
 }
 /* Image sources:
     background_picture : https://i0.wp.com/www.healthfitnessrevolution.com/wp-content/uploads/2017/02/iStock-609794900.jpg?fit=1254%2C836
