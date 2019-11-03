@@ -64,32 +64,31 @@ include "php/setup_session.php";
         <h2 class="centeredheader">
             Deals of the day
         </h2>
-        <p class="centeredparagraph" style="background-color:rgba(0,0,0,0.5); color:white;">
+        <p class="centeredparagraph">
             These are the products of the day, place an order now for an extra low price!
         </p>
         <form method="get" action="php/add_to_cart_hp_dotd.php">
             <div class="dealwrapper">
                 <img src="media/pics/durian_pizza3.jpg" class="dealimage">
-                <p class="background_para">
+                <p>
                     Durian and Pizza, what can be better? Just $12.95!
                 </p>
-                <input class="numberinput" name="numinput1" type="number" value=0 min="0" onchange="updatePrice('numinput1','<?php echo $product_name_1; ?>', <?php echo $product_price_1;?>)">
+                <label><input type="submit" value="Add to cart" name="pizza_dotd"></label>
             </div>
             <div class="dealwrapper">
                 <img src="media/pics/smoothie.jpg" class="dealimage">
-                <p class="background_para">
+                <p>
                     Try our patented smoothie for just $2.95 a piece!
                 </p>
-                <input class="numberinput" name="numinput2" type="number" value=0 min="0" onchange="updatePrice('numinput6','<?php echo $product_name_6; ?>', <?php echo $product_price_6;?>)">
+                <label><input type="submit" value="Add to cart" name="drink_dotd"></label>
             </div>
             <div class="dealwrapper">
                 <img src="media/pics/durian_dessert1.jpg" class="dealimage">
-                <p class="background_para">
+                <p>
                     Durian Pancake for just $5.95 each!
                 </p>
-                <input class="numberinput" name="numinput3" type="number" value=0 min="0" onchange="updatePrice('numinput12','<?php echo $product_name_12; ?>', <?php echo $product_price_12;?>)">
+                <label><input type="submit" value="Add to cart" name="dessert_dotd"></label>
             </div>
-            <input class="dealsubmit" type="submit" value="Add to cart">
         </form>
     </div>
     <footer>

@@ -1,37 +1,25 @@
 /* ========================================== CSS FOR HTML ELEMENTS ====================================== */
 
 body {
-    background: url("media/pics/black.jpg") center center fixed;
+    background: rgb(0,15,15);
     background-size:cover;
     width:100%;
     margin:0 0 0 0;
-}
-header {
-    height:100px;
-    width:100%;
-	background: url("media/pics/header_pic.png");
-	background-size: 500px 100px;
-	background-repeat: no-repeat;
-	background-position:center;
-	font-size:12px;
-	text-align:right;
+    color:rgb(200,200,200);
 }
 footer {
     text-align:center;
     font-style: italic;
     font-size:small;
     clear:both;
-    color:#FFFF00;
 }
 th {
-    font-size:larger;
-    border:double;
-    width:141px;
+    font-size: larger;
+    width: 150px;
 }
-td {
-    border:1px solid black;
+td{
+    margin-top:15px;
 }
-
 /* ========================================== CSS FOR ALL PAGES ====================================== */
 .header_div {
     height:100px;
@@ -203,28 +191,31 @@ td {
 }
 
 /* ========================================== CSS FOR MENU ====================================== */
-
-.menusubmit {
-    margin-top:10px;
+#menuwrapper {
+    margin-right: 5%;
+    width:40%;
+    height:100%;
+    background: url("media/pics/menu_background.png") no-repeat 100% 100%;
+    border-radius: 10px;
     float:right;
-    margin-right:50px;
 }
 #menutable {
-	width:50%;
-    margin-left:25%;
-    background-color:#5c743d;
-    color:#000033;
-	border:double;
+    width:auto;
+    height:100%;
+    color:black;
 }
-
-#price_and_cart {
-    width: 174px;
-    height:60px;
-    padding: 0 0 0 0;
-    float: right;
-    margin-right:325px;
+.menu_image {
+    width:50%;
+    height:50%;
+    float:left;
+    border-radius: 20px;
 }
-
+.menu_addtocart {
+    width:100%;
+    height:80%;
+    border-radius: 20px;
+    margin-left:10px;
+}
 .category_header {
 	border:none;
 	font-size:30px;
@@ -268,14 +259,13 @@ td {
     width:40%;
     height:100%;
     border-right:double;
+    border-color:black;
 }
 .jobtext {
     float:left;
     width:40%;
-    color:#FFFFFF;
     height:100%;
-    border-right:double;
-    border-color:#000000;
+    border-color:#006600;
 }
 .jobapplication {
     width:19.5%;
@@ -334,7 +324,7 @@ td {
 .cc_table {
     margin-left:auto;
     margin-right:auto;
-    background-color: #006600;
+    background-color: #003300;
     color: #FFFF00;
     border-color:black;
 }
@@ -343,11 +333,13 @@ td {
     color:#FFFF00;
 }
 /* Image sources:
-    background_picture : https://i0.wp.com/www.healthfitnessrevolution.com/wp-content/uploads/2017/02/iStock-609794900.jpg?fit=1254%2C836
+    menu_picture: https://pixabay.com/photos/menu-pizza-vegetables-eat-tomatoes-3206748/
     durian_pizza1.jpg : https://coconuts.co/wp-content/uploads/2018/11/45154492_410295856170787_729699099456045056_n-960x540.jpg
     durian_pizza2.jpg : https://media.therakyatpost.com/wp-content/uploads/2019/08/PHMY_Durian_Pizza_20190806.jpg
     durian_pizza3.jpg : https://kopifolks.com/wp-content/uploads/2017/07/pezzo2.jpg
+    durian_pizza4.png : https://www.pexels.com/photo/vegetables-italian-pizza-restaurant-2232/
 
+    smoothie_2.png : https://upload.wikimedia.org/wikipedia/commons/0/09/Fresh-mango-smoothie_01.jpg
     durian_dessert1.jpg : https://s3-ap-southeast-1.amazonaws.com/sphm-sww-site-production/2017/08/Heres-Where-To-Go-For-Delicious-Durian-Desserts-In-Singapore_14.jpg
 
     baker_job_application: https://pixabay.com/illustrations/pizza-maker-pizza-chef-pizzeria-3181892/
