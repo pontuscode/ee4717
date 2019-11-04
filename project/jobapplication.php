@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <title>The Durian Experience - Jobs</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="javascript/script.js"></script>
 </head>
 <body>
     <div class="header_div">
@@ -77,7 +78,7 @@
                 Please fill in the fields below. All fields with an asterisk* are required.  We will reply as soon as possible!<br>
                 You will get a confirmation e-mail once we receive the application!
             </p>
-            <form method="post" action="php/confirm_jobapplication.php" onsubmit="validateForm('jobs')">
+            <form method="post" action="php/confirm_jobapplication.php" onsubmit="return validateForm('jobs');">
                 <label for="firstname" class="label_jobapplication">First name*</label><input class="input_jobapplication" name="firstname" id="firstname" type="text" placeholder="First name" required><br>
                 <label for="lastname" class="label_jobapplication">Last name*</label><input class="input_jobapplication" name="lastname" id="lastname" type="text" placeholder="Last name" required><br>
                 <label for="email" class="label_jobapplication">E-mail*</label><input class="input_jobapplication" name="email" id="email" type="email" placeholder="E-mail address" required><br>

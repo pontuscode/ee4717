@@ -63,6 +63,7 @@
             $firstName = $_POST['firstname'];
             $lastName = $_POST['lastname'];
             $position = $_POST['position'];
+            $email = $_POST['email'];
             $experience = "n/a";
             if(strlen(trim($_POST['experience'])) > 0){
                 $experience = $_POST['experience'];
@@ -88,12 +89,12 @@
             } while($rand === 0);
             $message .= "<br>You application id is: " . $rand . "<br>Please save your id!<br>";
             $email_message .= "\nYou application id is: " . $rand . "\nPlease save your id!\n";
-            $sql = "INSERT INTO f32ee.de_applicants (application_id, applied_for, first_name, last_name, email, experience) VALUES ($rand, '$position', '$firstName', '$lastName', '$to', '$experience')";
+            $sql = "INSERT INTO f32ee.de_applicants (application_id, applied_for, first_name, last_name, email, experience) VALUES ($rand, '$position', '$firstName', '$lastName', '$email', '$experience')";
             if(!$result = mysqli_query($conn, $sql)){
                 echo "Something went wrong when inserting data to database: " . mysqli_error($conn);
             }
-            $message .= "<br>Confirmation mail sent to " . $to;
-            echo '<span style="display:block;margin-top:30px;color:#FFFF00;text-align:center;>' . $message . '</span>';
+            $message .= "<br>Confirmation mail sent to " . $email;
+            echo '<span style="display:block;margin-top:30px;text-align:center;">' . $message . '</span>';
             mail($to, $subject, $email_message, $headers, '-ff32ee@localhost');
         ?>
     </div>

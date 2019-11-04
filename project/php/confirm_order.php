@@ -101,7 +101,7 @@
                 $email_message .= "\nCredit card used: **** **** **** " . substr($cc_number, 12, 16) . "\n";
             }
             $message .= "<br>Confirmation mail sent to " . $email . "<br>";
-            echo '<span style="display:block;margin-top:30px;color:#FFFF00;text-align:center;">' . $message . '</span>';
+            echo '<span style="display:block;margin-top:30px;text-align:center;">' . $message . '</span>';
             mail($to, $subject,$email_message, $headers, '-ff32ee@localhost');
         ?>
     </div>

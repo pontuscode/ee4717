@@ -59,10 +59,10 @@
     </div>
     <div class="wrapper">
         <img src="media/pics/durian_pizza4.png" class="menu_image">
-            <div id="menuwrapper">
-                <table id="menutable">
+            <div class="menuwrapper">
+                <table class="menutable">
                     <?php
-                        $sql = "SELECT product_name, product_description, product_price FROM f32ee.de_products";
+                        $sql = "SELECT product_name, product_description, product_price, product_allergen FROM f32ee.de_products";
                         if(!$menu_result = mysqli_query($conn, $sql)){
                             echo "Something went wrong when fetching data from product table: " . mysqli_error($conn);
                         }
@@ -81,6 +81,16 @@
                             $numinput = "numinput" . $i;
                             echo '<tr><th>' . $menu_row['product_name'] . '</th><td>' . $menu_row['product_description'] . '<td>$' . '<span id=' . 'product_' . $i . '>' . $menu_row['product_price'] . '</span></td>';
                             echo '<td style="width:80px;"><a href="'. "?plus=" . ($i-1) . '"><img src="media/pics/add_to_cart.png" class="menu_addtocart"></a></td>';
+                            ?>
+                            <td style="width:20px;height:20px;padding-left:10px;">
+                                <div class="allergen_wrapper">
+                                    <img src="media/pics/info_symbol.png" class="menu_info_symbol">
+                                    <div class="allergen_info">
+                                        Allergens<?php echo ": " . $menu_row['product_allergen']; ?>
+                                    </div>
+                                </div>
+                            </td>
+                            <?php
                             $total = $total + (double)$menu_row['product_price'] * (int)$_SESSION['cart'][$i-1];
                         }
                         echo "<tr>";

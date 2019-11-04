@@ -78,44 +78,44 @@
              }
              echo '</span>';
         ?></p>
+        <div class="cc_menu_wrapper">
+            <table class="cc_table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                    </tr>
+                </thead>
 
-        <table class="cc_table" border="1">
-            <thead>
-                <tr>
-                    <th>Item</th>
-                    <th>Quantity</th>
-                    <th>Unit Price</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <?php
-                    $total = 0;
-                    $sql = "SELECT product_name, product_price FROM f32ee.de_products";
-                    if(!$result = mysqli_query($conn, $sql)){
-                        echo "Something went wrong when fetching data from database: " . mysqli_error($conn);
-                    }
-                    for($i = 0; $i < count($_SESSION['cart']); $i++){
-                         $row = mysqli_fetch_assoc($result);
-                         if($_SESSION['cart'][$i] > 0){
-                            echo "<tr>";
-                            echo "<td>" .$row['product_name']. "</td>";
-                            echo "<td align='center'>" .$_SESSION['cart'][$i]. "</td>";
-                            echo "<td align='right'>$" .$row['product_price']. "</td>";
-                            echo "</tr>";
-                            $total = $total + (double)$row['product_price'] * (int)$_SESSION['cart'][$i];
+                <tbody>
+                    <?php
+                        $total = 0;
+                        $sql = "SELECT product_name, product_price FROM f32ee.de_products";
+                        if(!$result = mysqli_query($conn, $sql)){
+                            echo "Something went wrong when fetching data from database: " . mysqli_error($conn);
+                        }
+                        for($i = 0; $i < count($_SESSION['cart']); $i++){
+                             $row = mysqli_fetch_assoc($result);
+                             if($_SESSION['cart'][$i] > 0){
+                                echo "<tr>";
+                                echo "<td align='center'>" .$row['product_name']. "</td>";
+                                echo "<td align='center'>" .$_SESSION['cart'][$i]. "</td>";
+                                echo "<td align='center'>$" .$row['product_price']. "</td>";
+                                echo "</tr>";
+                                $total = $total + (double)$row['product_price'] * (int)$_SESSION['cart'][$i];
+                             }
                          }
-                     }
-                    echo "<tr>";
-                    echo "<td colspan=2 align='left'><b>Total price </b></td>";
-                    echo "<td align='right'>$" . number_format($total, 2) . "</td>";
-                    echo "</tr>";
-                ?>
-            </tbody>
-        </table>
-        <p class="centeredparagraph"><a href="index.php" class="cc_links" style="margin-right:14%;">Continue shopping</a>
-        <a href="<?php echo $_SERVER['PHP_SELF']; ?>?empty=1" class="cc_links">Empty your cart</a></p>
-        <div class="wrapper">
+                        echo "<tr>";
+                        echo "<td colspan=2 align='left' style='padding-left:35px;font-size:20px; font-weight:bold;'>Total price</td>";
+                        echo "<td align='center' style='font-size:20px; font-weight:bold;'>$" . number_format($total, 2) . "</td>";
+                        echo "</tr>";
+                    ?>
+                </tbody>
+            </table>
+            <p class="centeredparagraph"><a href="index.php" class="cc_links" style="margin-right:14%;">Continue shopping</a>
+            <a href="<?php echo $_SERVER['PHP_SELF']; ?>?empty=1" class="cc_links">Empty your cart</a></p>
+        </div>
             <div class="application_wrapper">
                 <h2 class="centeredheader">
                     Place order
@@ -158,7 +158,7 @@
 
 <?php
     function displayEmpty(){
-        echo '<p class="centeredparagraph"><a href="index.php" class="cc_links">Continue shopping</a>';
+        echo '<p class="centeredparagraph"><a href="index.php" class="cc_empty_links">Continue shopping</a>';
         echo '<footer>
             <p>Copyright &copy; The Durian Company 2019. </p>
             <p>Hiranandani Gardens, Mumbai, Maharashtra 400076, India </p>
