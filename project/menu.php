@@ -90,7 +90,7 @@
                     ?>
                 </table>
             </div>
-            <img src="media/pics/smoothie_2.png" class="menu_image">
+            <img src="media/pics/durian_salad1.jpg" class="menu_image">
         </div>
     </div>
     <footer>

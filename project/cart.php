@@ -124,15 +124,15 @@
                     Please fill in the fields below. All fields with an asterisk* are required.<br>
                     You will get a confirmation e-mail once we receive the order!
                 </p>
-                <form method="post" action="php/confirm_order.php">
-                    <label for="firstname" class="label_jobapplication">First name*</label><input class="input_jobapplication" name="firstname" id="firstname" type="text" placeholder="First name" required onchange="validateName()"><br>
-                    <label for="lastname" class="label_jobapplication">Last name*</label><input class="input_jobapplication" name="lastname" id="lastname" type="text" placeholder="Last name" required onchange="validateName()"><br>
-                    <label for="email" class="label_jobapplication">E-mail*</label><input class="input_jobapplication" name="email" id="email" type="email" placeholder="E-mail address" required onchange="validateEmail()"><br>
+                <form method="post" action="php/confirm_order.php" onsubmit="return validateForm('order');">
+                    <label for="firstname" class="label_jobapplication">First name*</label><input class="input_jobapplication" name="firstname" id="firstname" type="text" placeholder="First name" required><br>
+                    <label for="lastname" class="label_jobapplication">Last name*</label><input class="input_jobapplication" name="lastname" id="lastname" type="text" placeholder="Last name" required><br>
+                    <label for="email" class="label_jobapplication">E-mail*</label><input class="input_jobapplication" name="email" id="email" type="email" placeholder="E-mail address" required><br>
                     <label for="streetaddress" class="label_jobapplication">Street address*</label><input class="input_jobapplication" name="streetaddress" id="streetaddress" type="text" placeholder="Street address" required><br>
                     <label for="zipcode" class="label_jobapplication">Zip code*</label><input class="input_jobapplication" name="zipcode" id="zipcode" type="text" placeholder="Zip code" required><br>
                     <label for="additional_info" class="label_jobapplication">Additional info</label><textarea class="input_jobapplication" id="additional_info" rows="4" cols="40" placeholder="Additional info to driver"></textarea><br>
                     <label for="payment" class="label_jobapplication">Payment*</label>
-                    <select class="input_jobapplication" name='payment_method' required onchange="creditcard_info()">
+                    <select class="input_jobapplication" name='payment_method' required onchange="displayCreditcardInfo()">
                         <option selected disabled>Choose here</option>
                         <option value="cash">Cash</option>
                         <option id="creditcard" value='creditcard'>Credit card</option>

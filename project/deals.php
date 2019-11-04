@@ -69,23 +69,23 @@ include "php/setup_session.php";
         </p>
         <form method="get" action="php/add_to_cart_hp_dotd.php">
             <div class="dealwrapper">
-                <img src="media/pics/durian_pizza3.jpg" class="dealimage">
+                <img src="media/pics/durian_pizza5.jpg" class="dealimage">
                 <p>
-                    Durian and Pizza, what can be better? Just $12.95!
+                    The Meatzza is topped with all the meats we have to offer; perfect for a meat lover! Just $21.95!
                 </p>
                 <label><input type="submit" value="Add to cart" name="pizza_dotd"></label>
             </div>
             <div class="dealwrapper">
-                <img src="media/pics/smoothie.jpg" class="dealimage">
+                <img src="media/pics/durian_drink1.jpg" class="dealimage">
                 <p>
-                    Try our patented smoothie for just $2.95 a piece!
+                    You should really try the Hot Mess, our own Durian Tea. Now for the special price of $1.95!
                 </p>
                 <label><input type="submit" value="Add to cart" name="drink_dotd"></label>
             </div>
             <div class="dealwrapper">
-                <img src="media/pics/durian_dessert1.jpg" class="dealimage">
+                <img src="media/pics/durian_dessert4.jpg" class="dealimage">
                 <p>
-                    Durian Pancake for just $5.95 each!
+                    Our Lemon/Durian pudding is a real treat. For only $4.95, its sweet and sour goodness will stick with you for days!
                 </p>
                 <label><input type="submit" value="Add to cart" name="dessert_dotd"></label>
             </div>

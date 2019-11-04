@@ -18,13 +18,7 @@
                     <span id="shopping_cart">
                         <div class="cart_image">
                             <?php
-                                $total = 0;
-                                for($i = 0; $i < count($_SESSION['cart']); $i++){
-                                    if($_SESSION['cart'][$i] > 0){
-                                         $total += $_SESSION['cart'][$i];
-                                     }
-                                }
-                                echo $total;
+                                echo '0';
                             ?>
                         </div>
                     </span>

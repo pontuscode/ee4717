@@ -10,13 +10,13 @@
         $_SESSION['cart'][11]++;
         header("location:../index.php#dessert_homepage");
     }elseif(isset($_GET['pizza_dotd'])){
-        $_SESSION['cart'][0]++;
+        $_SESSION['cart'][2]++;
         header("location:../deals.php");
     }elseif(isset($_GET['drink_dotd'])){
-        $_SESSION['cart'][6]++;
+        $_SESSION['cart'][8]++;
         header("location:../deals.php");
     }elseif(isset($_GET['dessert_dotd'])){
-        $_SESSION['cart'][11]++;
+        $_SESSION['cart'][10]++;
         header("location:../deals.php");
     }
 ?>

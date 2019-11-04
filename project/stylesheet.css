@@ -126,7 +126,7 @@ td{
 .pic {
     height:auto;
     width:100%;
-    display:inline;
+    display:inline-block;
 }
 
 .pic_left {
@@ -134,62 +134,30 @@ td{
     height: 100%;
     float:left;
     padding-left: 150px;
+    border-radius: 20px;
 }
 
 .pic_right {
     width:40%;
-    height: 100%;
+    height: 500px;
     float:right;
     padding-right: 150px;
+    border-radius: 20px;
 }
 
 .para_right_box {
     float: left;
     width: 40%;
     height: auto;
-    padding: 50px 0 0 50px;
+    padding: 50px 0 0 40px;
 }
 
 .para_left_box {
     float: right;
     width: 40%;
     height: auto;
-    padding: 50px 50px 0 0;
+    padding: 50px 30px 0 0;
 }
-
-.para_right {
-    color:#FFFFFF;
-    width:85%;
-    float:left;
-    background-color:rgba(0,0,0,0.6);
-    margin:0;
-}
-.para_left {
-    color:#FFFFFF;
-    width:85%;
-    float:right;
-    background-color:rgba(0,0,0,0.6);
-    margin:0;
-    clear:left;
-}
-.h2_homepage_left {
-    color:#FFFFFF;
-    background-color: rgba(0,0,0,0.6);
-    margin:0;
-    text-align:center;
-    width:30%;
-    float:right;
-    clear:left;
-}
-.h2_homepage_right {
-    color:#FFFFFF;
-    background-color: rgba(0,0,0,0.6);
-    margin:0;
-    text-align:center;
-    width:30%;
-    float:left;
-}
-
 /* ========================================== CSS FOR MENU ====================================== */
 #menuwrapper {
     margin-right: 5%;
@@ -208,7 +176,8 @@ td{
     width:50%;
     height:50%;
     float:left;
-    border-radius: 20px;
+    border-radius: 10px;
+    margin: 5 5 5 5;
 }
 .menu_addtocart {
     width:100%;
@@ -236,6 +205,7 @@ td{
 .dealimage {
     width:100%;
     height:300px;
+    border-radius: 20px;
 }
 .dealsubmit {
     margin-top:20px;
@@ -338,9 +308,16 @@ td{
     durian_pizza2.jpg : https://media.therakyatpost.com/wp-content/uploads/2019/08/PHMY_Durian_Pizza_20190806.jpg
     durian_pizza3.jpg : https://kopifolks.com/wp-content/uploads/2017/07/pezzo2.jpg
     durian_pizza4.png : https://www.pexels.com/photo/vegetables-italian-pizza-restaurant-2232/
+    durian_pizza5.jpg : https://www.flickr.com/photos/mike_mccormick/6131023157
 
-    smoothie_2.png : https://upload.wikimedia.org/wikipedia/commons/0/09/Fresh-mango-smoothie_01.jpg
+    durian_drink1.jpg : https://commons.wikimedia.org/w/index.php?curid=60355517
+    durian_drink2.png : https://upload.wikimedia.org/wikipedia/commons/0/09/Fresh-mango-smoothie_01.jpg
+    durian_drink3.jpg : https://pxhere.com/en/photo/1580815
+
     durian_dessert1.jpg : https://s3-ap-southeast-1.amazonaws.com/sphm-sww-site-production/2017/08/Heres-Where-To-Go-For-Delicious-Durian-Desserts-In-Singapore_14.jpg
+    durian_dessert4.jpg : https://www.needpix.com/photo/1199357/dessert-sweetness-sweet-food-gluttony-eat
+
+    durian_salad1.jpg : https://www.flickr.com/photos/30478819@N08/39915323073
 
     baker_job_application: https://pixabay.com/illustrations/pizza-maker-pizza-chef-pizzeria-3181892/
     delivery_job_application: https://www.needpix.com/photo/643892/delivery-guy-boy-man-delivery-courier-pizza-pizza-delivery-scooter-quick-delivery
