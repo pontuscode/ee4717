@@ -24,6 +24,7 @@ CREATE TABLE de_products (
     product_price DOUBLE NOT NULL,
     product_category INT UNSIGNED,
     product_description VARCHAR(500),
+    product_allergen VARCHAR(100),
 
     CONSTRAINT FOREIGN KEY(product_category) REFERENCES de_category(category_id)
 );
@@ -56,6 +57,7 @@ CREATE TABLE de_applicants (
     first_name VARCHAR(40),
     last_name VARCHAR(40),
     email VARCHAR(40),
+    experience VARCHAR(500),
 
     CONSTRAINT FOREIGN KEY fk_applicant(applied_for) REFERENCES de_positions(position_id)
 );
