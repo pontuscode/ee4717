@@ -70,19 +70,19 @@ INSERT INTO f32ee.de_category (category_id, category_name, category_description)
     (4, "Dessert", "All desserts include durian as standard.");
 
 SELECT "Filling product table" AS MESSAGE;
-INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_description, product_category)
-    VALUES (NULL, "The Original", 12.95, "Ham", 1),
-    (NULL, "Tutti Frutti", 15.95, "Mango, Pineapple, Banana, Curry powder", 1),
-    (NULL, "Meatzza", 21.95, "Ham, Pepperoni, Bacon, Chicken", 1),
-    (NULL, "Durian Overload", 23.95, "Extra Durian, Extra Cheese", 1),
-    (NULL, "Peanut pizza", 14.95, "Peanuts, Banana", 1),
-    (NULL, "Greek Salad", 9.95, "Feta cheese, Olives, Red bellpepper", 2),
-    (NULL, "Mango Juice", 4.95, "Mango/Durian Juice", 3),
-    (NULL, "Watermelon Juice", 2.95, "Watermelon/Durian Juice", 3),
-    (NULL, "Hot mess", 1.95, "Warm durian drink", 3),
-    (NULL, "Chocolate Milkshake", 3.95, "Chocolate/Durian milkshake", 4),
-    (NULL, "Lemon Pudding", 4.95, "Lemon/Durian pudding",  4),
-    (NULL, "Durian Pancake", 5.95, "Served with Durian Jam",4);
+INSERT INTO f32ee.de_products (product_id, product_name, product_price, product_description, product_category, product_allergen)
+    VALUES (NULL, "The Original", 12.95, "Ham", 1, "Dairy"),
+    (NULL, "Tutti Frutti", 15.95, "Mango, Pineapple, Banana, Curry powder", 1, "Dairy"),
+    (NULL, "Meatzza", 21.95, "Ham, Pepperoni, Bacon, Chicken", 1, "Dairy"),
+    (NULL, "Durian Overload", 23.95, "Extra Durian, Extra Cheese", 1, "Dairy"),
+    (NULL, "Peanut pizza", 14.95, "Peanuts, Banana", 1, "Dairy, Nuts"),
+    (NULL, "Greek Salad", 9.95, "Feta cheese, Olives, Red bellpepper", 2, "Dairy"),
+    (NULL, "Mango Juice", 4.95, "Mango/Durian Juice", 3, "None"),
+    (NULL, "Watermelon Juice", 2.95, "Watermelon/Durian Juice", 3, "None"),
+    (NULL, "Hot mess", 1.95, "Warm durian drink", 3, "None"),
+    (NULL, "Chocolate Milkshake", 3.95, "Chocolate/Durian milkshake", 4, "Dairy"),
+    (NULL, "Lemon Pudding", 4.95, "Lemon/Durian pudding",  4, "None"),
+    (NULL, "Durian Pancake", 5.95, "Served with Durian Jam",4, "Dairy, Eggs");
 
 SELECT "Filling position table" AS MESSAGE;
 INSERT INTO f32ee.de_positions (position_id, position_name, position_salary)
